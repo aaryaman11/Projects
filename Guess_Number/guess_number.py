@@ -5,6 +5,8 @@
 import random
 
 guess_input = input("Guess the number ")
+
+
 # Random num = new Random()
 
 # converting string to digit
@@ -14,8 +16,14 @@ if guess_input.isdigit():
 
 
 y = random.randrange(1, 7)
+
+# number of times a person can guess
+guess_chances = 0
+guess_chances += 1
+
 while guess_input != y:
     z = input("Try again! ")
+    guess_chances += 1
 
     # converting string to digit  or int
     if z.isdigit():
@@ -23,5 +31,6 @@ while guess_input != y:
     if z == y:
         print("you guessed the right  number")
         break
-    # elif guess_input != y:
-    #   print("Wrong number! Try again ")
+    elif guess_chances == 3:
+        print("You are out of chances! ")
+        break
