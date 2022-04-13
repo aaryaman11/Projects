@@ -23,7 +23,10 @@ guess_chances = 0
 guess_chances += 1
 
 while guess_input != y:
-    z = input("Try again! ")
+    if guess_input < y:
+        z = input("Try again! With a  higher number")
+    elif guess_input > y:
+        z = input("Try again! With a lower number")
     guess_chances += 1
 
     # converting string to digit  or int
