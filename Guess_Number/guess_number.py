@@ -2,6 +2,7 @@
 # need to make a  randomizer of  numbers
 # a condition when the user guessed the right number the program ends
 # At the end it gives a message of you guessed the right number
+# let the user know how many chances they are  left with or in the beginning tell them u have 3 chances
 import random
 
 guess_input = input("Guess the number ")
