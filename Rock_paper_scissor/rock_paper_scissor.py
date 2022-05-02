@@ -42,3 +42,5 @@ while user_wins != 3 and computer_wins != 3:
     else:
         print("Draw. Try again!")
         continue
+
+print("Game Over!")
