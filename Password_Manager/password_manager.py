@@ -6,18 +6,17 @@
 from cryptography.fernet import Fernet
 
 
-user_pwd = input("Enter the master password: ")
-
 # using a key + master password(user_pwd) + targeted input to encrypt to result in random output or encrypted password
 # using a key + master password(user_pwd) + random output = actual input or password user put before
 
 # function to make the key
 
-'''
-def write_key():
+
+'''def write_key():
     key = Fernet.generate_key()
     with open("key.key", "wb") as key_file:
         key_file.write(key)'''
+
 
 # function to load the key
 
@@ -29,7 +28,10 @@ def load_key():
     return key
 
 
-load_key()
+user_pwd = input("Enter the master password: ")
+# .encode() converting the master password to bytes because load_key ould be in bytes  and both can be add together
+key = load_key() + user_pwd.encode()
+fer = Fernet(key)
 
 
 def add():
@@ -40,7 +42,7 @@ def add():
 # there are 3 modes --> 'a' --> append mode, 'w' --> it would write the whole or destroy the file completely if the file already exists, 'r' --> this is just read mode
 # reference --> https://www.programiz.com/python-programming/file-operation
     with open("passowrds.txt", "a") as f:
-        f.write(account + "|" + password + "\n")
+        f.write(account + "|" + fer.encrypt(password.encode()).decode() + "\n")
 
 
 def view():
@@ -50,7 +52,9 @@ def view():
             data = line.rstrip()
             # refernce --> https://www.w3schools.com/python/ref_string_split.asp
             user, passwo = data.split("|")
-            print("User: " + user, "| password: " + passwo)
+            # used the decode() to decode from bytes and don't get this output in view anymore b'Striker' baasically to remove the b
+            print("User: ", user, "| password: ",
+                  fer.decrypt(passwo.encode()).decode())
 
 
 while True:
