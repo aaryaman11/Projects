@@ -43,8 +43,7 @@ def hangman():
             print("you have already used this word. ")
         else:
             print("Please try again. ")
-    if len(word_letters) == 0:
-        print(f'You have won the game!')
+    return "You have won the game!"
 
 
 #user_input = input("Type Something: ")
