@@ -24,6 +24,8 @@ def hangman():
     # keep track of the letters being used for the user
 
     while len(word_letters) > 0:
+        # important to avoid showing just set() like  this --> You  have used letters:  set().
+        # Use the .join method for print than f string method
         print(f'You  have used letters: {guessed_letters}')
 
         # words which are guessed and it also shows what more needs to be guessed (ie W - - A)
