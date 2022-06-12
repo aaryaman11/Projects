@@ -31,7 +31,8 @@ def hangman():
         # words which are guessed and it also shows what more needs to be guessed (ie W - - A)
         word_list = [
             letter if letter in guessed_letters else '-' for letter in word]
-        print(f'Current word: {word_list}')
+        # to not to  show  the words in actual list format ie [] use .join method for the print statement rather than f string
+        print('Current word:', ' ' .join(word_list))
         user_guessed = input("Type a letter: ").upper()
         # user_guessed in alphabet but not in guessed_letters  that what the if statement  means
         if user_guessed in alphabet - guessed_letters:
