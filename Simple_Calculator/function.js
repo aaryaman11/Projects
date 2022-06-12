@@ -5,6 +5,9 @@ class calculator {
     }
     clear() { }
     delete() { }
+    appending_number() { }
+    chose_operation() { }
+
 }
 
 

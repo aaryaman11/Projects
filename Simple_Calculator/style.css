@@ -9,7 +9,8 @@
 body {
     padding: 0;
     margin: 0;
-    background-color: aqua;
+    background-color: rgb(48, 84, 230);
+    /*background-color: linear-gradient(to right, aqua, orange);*/
 }
 
 .calculator-grid {
