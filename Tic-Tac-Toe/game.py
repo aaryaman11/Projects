@@ -120,7 +120,7 @@ def play(game, x_player, o_player,  print_game=True):
             print('It\'s a tie!')
 
 
-if __name__ == ' __main__':
+if __name__ == '__main__':
     x_player = human_player('X')
     o_player = computer_player('O')
     t = TicTactoe()
