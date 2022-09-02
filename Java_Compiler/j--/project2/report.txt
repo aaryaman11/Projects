@@ -1,0 +1,82 @@
+1. Enter the number of hours it took you to complete the project between
+   the <<< and >>> signs below (eg, <<<10>>>).
+
+   <<<20>>>
+   
+2. Enter the difficulty level (1: very easy; 5: very difficult) of the project
+   between <<< and >>> signs below (eg, <<<3>>>).
+
+   <<<3>>>
+
+3. Provide a short description of how you approached each problem, issues you 
+   encountered, and how you resolved those issues.
+
+   Problem 1 (Multiline Comment)
+      Approach: for problem 1, I watched the lecture video to understand the state transition diagram. By watching
+      the video I knew that my initial state start would have to start from '/*' and end at '*/'. So, it gave me the
+      idea that I have to use while loop. As, my while loop would eat all the comments until it sees the end state or
+      where the multiline comment ends. First, I thought of using while loop like while (ch != "*/" && ch != EOFCH),
+      but I got errors and realized why it would not work. After this I thought if after my loop I can just go to the
+      next character and use the if statements until the loop encounter the character '*' and the use another if
+      statement to check if the nextch(); is '/'. If the nextch(); after '*' in the loop is  '/' then it would end the
+      multiline comment. This approach of while loop and nested if statements worked to solve problem 1
+
+      Issues and resolution: The first issue I got was, when I was using while loop like this
+      while (ch != "*/" && ch != EOFCH). I got the error, I can't put two characters like this "*/" in the loop. Also,
+      it gave unidentified input error for "*/" in the while loop. To resolve this issue I thought of another way of
+      using while loop. I though that I would just use my while loop and only have 1 condition (ch != EOFCH) in it and
+      use nested if statements to scan for '*' and then go to nextch(); to check if this character --> '/' is after '*'.
+      If it is then it would be where my multiline comment would end.Second issue was, that I was struggling with my
+      nested if statements in the while loop for multiline comment. I asked Albert about the problem, and he gave me the
+      tip to focus on the previous problems and how I have used the nested if statements in those problems. It clicked
+      in my mind, and I noticed that I was not using nextch(); properly in my nested if statements for multiline comment.
+      Third issue was that my while loop was not terminating until it was EOFCH. Due to this my while loop was eating
+      everything not just the comment, and it was silly of me that I didn't think of using a break; statement to
+      terminate the loop. Albert, also pointed out that I could use a break; statement to  terminate the loop. After
+      using the break statement, my problem 1 worked.
+
+   Problem 2 (Operators)
+      Approach: for problem 2, I followed the directions in the pdf and used the knowledge of what I learned in project1
+      to modify and added new operators in TokenInfo.java by looking at grammar.pdf. The grammar.pdf helped me to check
+      what's the image of the operators. So, I can modify TokenInfo.java accordingly. To modify Scanner.java I applied
+      my knowledge of what I learned in project1, and used nested if statements, where I had operators like '&=', '%=',
+      '|=', '||' and many other for which I had to carefully use nested if statements, and where to put the nextch(); in
+      the nested statements.
+
+      Issues and resolution: I got the error --> j-- -t tests/Operators.java ✘ "tests/Operators.java:2: error:
+      Unidentified input token: ':'" != '' - tests/Operators.java:2: error: Unidentified input token: ':' in Gradescope.
+      I noticed in scanner.java that I forgot to make the switch case for COLON. After the making the switch case, I was
+      able to solve the error.
+   
+   Problem 3 (Reserved Words)
+      Approach: for problem 3, I followed the directions in the pdf and used the knowledge of what I learned in project1
+      to modify and added new Reserved words in TokenInfo.java by looking at grammar.pdf. In project1 I learned, how the
+      reserved words, separators or operators have their images next to it in grammar.pdf The grammar.pdf helped me to
+      check what's the image of the reserved words. So, I can modify TokenInfo.java accordingly. To modify Scanner.java
+      I checked the hashtable in Scanner.java for the reserved words, which gave me the hint how to put reserved
+      words in hashtable.
+
+      Issues and resolution: I didn't get any issue for problem3
+   Problem 4 (Literals)
+      Approach: for problem 4, first I checked the grammar.pdf to modify TokenInfo.java with their image
+      <DOUBLE_LITERAL>, <LONG_LITERAL> of DOUBLE_LITERAL and LONG_LITERAL respectively. Second, I modified the
+      Scanner.java by making the if statement under the while loop of INT_LITERAL for the extension of LONG_LITERAL. In
+      the if statement I used if the character == to 'l' or 'L' then buffer would append the character and return the
+      LONG_LITERAL otherwise INT_LITERAL
+
+      Issues and resolution: I was not getting the right output, but I noticed that I did not buffer.append if there are
+      cases with 'l' or 'L'. After putting the buffer.append it got fixed.
+
+4. Did you receive help from anyone? List their names, status (classmate, 
+   CS451/651 grad, TA, other), and the nature of help received.
+
+   Name               Status       Help Received
+   Albert              classmate       problem 2 for breaking my loop
+
+   ...                ...          ...
+
+5. List any other comments here. Feel free to provide any feedback on how
+   much you learned from doing the assignment, and whether you enjoyed
+   doing it.
+
+   ...

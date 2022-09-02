@@ -1,0 +1,107 @@
+1. Enter the number of hours it took you to complete the project between
+   the <<< and >>> signs below (eg, <<<10>>>).
+
+   <<<30>>>
+   
+2. Enter the difficulty level (1: very easy; 5: very difficult) of the project
+   between the <<< and >>> signs below (eg, <<<3>>>).
+
+   <<<5>>>
+
+3. Provide a short description of how you approached each problem, issues you 
+   encountered, and how you resolved those issues.
+
+   Problem 1 (Long and Double Basic Types)
+      Approach: for this problem, I first followed the instruction in the pdf given by professor Swami. I implemented
+      the analyze and codegen in jliterallong and jliteraldouble by using jLiteralint as a model. After that I created
+      new converters in Jcastop like L2D, D2I, I2D and many more long and double conversions with char and int. I
+      modified partialcodegen in  JMethodDeclaration to support long and double. For the analyze part
+      JConstructorDeclaration, JMethodDeclaration, and JVariableDeclaration to skip an offset, I was confused how to
+      implement it. I took James's help to understand on how to skip offset for long and double as requires 8 bytes
+      compared to 4bytes for int. Also, James helped me in modifying codegen() in JReturnStatement by pointing the
+      file CLConstants.java to check constants for double and long. For codegen in Jvariable, JArrayExpression,
+      JArrayInitializer, I used the existing codegen methods in these files as model to modify the respective files.
+      I used existing codegenStore() and  codegenLoadLhsRvalue as models to modify JArrayExpression and
+      JArrayInitializer respectively.
+
+      Issues and resolution:  I got this error: Type double doesn't match type int. I fixed this error by removing
+      these lines lhs.type().mustMatchExpected(line(), Type.INT); rhs.type().mustMatchExpected(line(), Type.INT); from
+      JBinaryExpression. After fixing this problem I was able to resolve my errors
+
+
+   Problem 2 (Operators)
+      Approach: for this problem, I followed the same procedure as problem 1 by following the pdf instructions. I
+      modified the analyze and codegen for respective files in pdf by using the existing codegen and analyze methods
+      for other files and operators as a model. I took James's help in understanding JLogicalOrOP and JNotEqual for
+      implementing and how to use the ontrue. After implementing ontrue properly, I modified the analyze and codegen for
+      rest of the files given in pdf for long and double.
+
+      Issues and resolution: error: I got this error --> Type int doesn't match type boolean. I solved this error by
+      fixing my JNotEqualOp by james's help.
+
+
+   Problem 3 (Conditional Expression)
+      Approach: for this problem I followed the instruction in the pdf and used JBooleaanExpression and jifstatement
+      as model in implementing analyze and codegen() respectively.
+
+
+      Issues and resolution: I got this error--> Exception in thread "main" java.lang.NullPointerException. I solved
+      this error by removing the line rhs.type().mustMatchExpected(line(), lhs.type()); in Jassignment. James indicated
+      to remove such lines from my code on piazza
+
+
+   Problem 4 (Do Statement)
+      Approach:  for this problem I followed the instruction in the pdf and used JBooleaanExpression and jifstatement
+      for analyze and codegen as model to implement it. For codegen I created the String Labels S1 and S2 to add those
+      labels in output, and used ontrue to jump on the output if the condition is true. If the condition is not true
+      output and add other label S2
+
+
+      Issues and resolution: I got this error--> Exception in thread "main" java.lang.ClassCastException: class
+      jminusminus.JBlock cannot be cast to class jminusminus.JExpression (jminusminus.JBlock and jminusminus.JExpression
+      are in unnamed module of  loader 'app'). I solved this error by fixing my analyze when I was Jexpression instead
+      of Jstatement in here --> body = (JStatement) body.analyze(context);
+
+   Problem 5 (For Statement)
+      Approach: ...
+
+      Issues and resolution: ...
+
+   Problem 6 (Break Statement)
+      Approach: ...
+
+      Issues and resolution: ...
+
+   Problem 7 (Continue Statement)
+      Approach: ...
+
+      Issues and resolution: ...
+
+   Problem 8 (Switch Statement)
+      Approach: ...
+
+      Issues and resolution: ...
+
+   Problem 9 (Exception Handlers)
+      Approach: ...
+
+      Issues and resolution: ...
+
+   Problem 10 (Interface Type Declaration)
+      Approach: ...
+
+      Issues and resolution: ...
+
+4. Did you receive help from anyone? List their names, status (classmate, 
+   CS451/651 grad, TA, other), and the nature of help received.
+
+   Name               Status       Help Received
+   James                 TA         problem 1 and problem 2
+
+   ...                ...          ...
+
+5. List any other comments here. Feel free to provide any feedback on how
+   much you learned from doing the assignment, and whether you enjoyed
+   doing it.
+
+   ...

@@ -1,0 +1,178 @@
+1. Enter the number of hours it took you to complete the project between
+   the <<< and >>> signs below (eg, <<<10>>>).
+
+   <<<35>>>
+   
+2. Enter the difficulty level (1: very easy; 5: very difficult) of the project
+   between the <<< and >>> signs below (eg, <<<3>>>).
+
+   <<<4>>>
+
+3. Provide a short description of how you approached each problem, issues you 
+   encountered, and how you resolved those issues.
+
+   Part I (Additions to JavaCC Scanner)
+
+   Problem 1 (Multiline Comment)
+      Approach: for problem 1, first I checked how multiline is being implemented in the grammar, and also how single
+      line comment was implemented in j--.jj. I followed the grammar and implemented to skip begin multi line starting
+      with /* and skip multi line ending with */ and at the end implemented to skip ~[] and throw away strings, which
+      matches regular expression.
+
+      Issues and resolution: Error: I got this error --> Could not find or load main class jminusminus.JavaCCMain, and
+      was not able to figure out, what to do. I went to TA office hours, and James pointed it out that I should change
+      <IN_SINGLE_LINE_COMMENT> for multiline comment to <IN_MULTI_LINE_COMMENT>, as I was also getting the error
+      <IN_SINGLE_LINE_COMMENT> token already exist, and I cannot use it in multiline comment. I need to change it a
+      bit. By James's help, I was able to resolve this issue
+
+
+   Problem 2 (Operators)
+      Approach: for this problem, I implemented the operator given in the project 4 pdf. I did that based on what I have
+      learned from previous projects, which was to implement tokens under operators and their image in the correct order.
+      For example, ARSHIFT_ASSIGN, and it's image  ">>=" from the grammar.
+
+      Issues and resolution: I didn't get any error for this problem
+
+   Problem 3 (Reserved Words)
+      Approach: for this problem, I implemented the operator given in the project 4 pdf. I did that based on what I have
+      learned from previous projects, which was to implement tokens under Reserved words and their image in the correct
+      order. For example, SWITCH, and it's image  switch" from the grammar.
+
+      Issues and resolution: I got the error, that "try" is not defined in the reserved words. I checked the tokens for
+      reserved words and noticed that I forgot to implement the reserved word "try". I implemented the reserved word
+      "try", and was able to resolve the error.
+
+   Problem 4 (Literals)
+      Approach: for problem 4, first I checked the grammar for long and double and implemented them according to the
+      order in grammar. For LONG_LITERAL implemented the INT_LITERALS and "l", "L" so it can scan them, and didn't get
+      any problem with it. For double, I tried to follow the grammar, but my build was getting failed as I was messing
+      up with the parenthesis--> () and square brackets-->[]. I took the TA's help to solve for the double literal ,as
+      he explained me, how we can use "+" for 1 and more occurrences. Also, the post from professor swami on piazza,
+      on how to use "?" to scan "+" and "-" for double, helped a lot. When I was implementing exponent and suffix for
+      double, James told me to use "?" for the one's in square bracket-->[], so the double literal can choose exponent
+     ,suffix or digits and scan further tokens associated with each respectively. With all the help I was able to
+     implement the double literal successfully.
+
+      Issues and resolution: I was getting problem with implementing double, as my build was getting failed. To solve
+      this issue I went to TA's office hrs, and James(TA) explained me on how to use "+" for digits and the use of
+      square brackets-->[], for 0 and 1 occurrence. As I was mixing them with parenthesis-->(), also one of the other
+      errors I got into was this --> Encountered " "[" "[ "" at line 237, column 13. This error occurred because, I put
+      the closing angle bracket after suffix--> <SUFFIX>: ["d" ,"D"]> instead of  <SUFFIX>: ["d" ,"D"]> like this.
+      James, noticed that, and I was able to get rid of that error.
+
+   Part II (Additions to JavaCC Parser)
+
+   Problem 5 (Long and Double Basic Types)
+      Approach: for this problem, I checked the grammar to see, where I have to implement LONG and DOUBLE for basic type.
+      From the grammar, I noticed I have to modify basicType and literal for long and double. I followed the grammar,
+      and implemented them accordingly in order. In the literal, I implemented LONG_LITERAL and DOUBLE_LITERAL by using
+      CHAR_LITERAL and INT_LITERAL as a model. I, also updated the expr by assigning it to JLiteralLong() and
+      JLiteralDouble() in their respective token to parse them.
+
+      Issues and resolution: This is the error I got from this problem --> javaccj-- -p tests/BasicTypes.java ✘
+      'tests/BasicTypes.java:1: error: ".D" found where \n   ";"... sought' != ''- tests/BasicTypes.java:1: error: ".D"
+       found where -  ";"... sought. I asked James about this error, and he pointed that something is wrong with my
+       problem 4. I checked my problem 4, and saw I was missing "?" after the last right paren ((<DIGIT>)+). I fixed
+       that and was able to resolve my error.
+
+
+   Problem 6 (Operators)
+      Approach: for this problem, I added the support for the given operator in the project4 pdf. I did that based on
+      what I learned from project3 on implementing JExpression and how to update them according to token, we are
+      implementing. I implemented most of the tokens under assignmentExpression and made sure what is their lhs and rhs
+      respective to each operator token, according to the grammar. I also used, the already implemented operator tokens
+      in j--.jj as a model to implement the operator in the pdf correctly. I needed to modify the statementExpression()
+      for post-increment and pre-decrement, so the expressions can be scanned accordingly.
+
+      Issues and resolution: I got the Error: Line 1188, Column 13: Undefined lexical token name "LOR". As I noticed, I
+      forgot to implement the token "LOR" in problem 2. After implementing the "LOR" token, I was able to resolve the
+      error.
+
+   Problem 7 (Conditional Expression)
+      Approach: for this problem, first I followed the grammar and created the conditionalExpression() method after
+      assignmentExpression(), by following the order in the grammar. I also used the project3 as a guide to make sure
+      I was implementing the QUESTION and COLON at the right places. I implemented the QUESTION expression and the COLON
+      expression, and updated the lhs with new JConditionalExpression(line, lhs, expr ,rhs) with arguments line, lhs,
+      expr for the expression() method from question and rhs for conditionalExpression method from colon and returned
+      the new lhs at the end.
+
+      Issues and resolution: I got the error: cannot find symbol expr = expression();. As I forgot to implement the
+      JExpression expr = null at the beginning and after the conditionalExpression() method. I noticed that by looking
+      at the JExpression expression(), and fixed my conditionalExpression() to solve this error.
+
+
+   Problem 8 (Do Statement)
+      Approach: for this problem, I followed the grammar and used project3 as a model, which made it easy to implement
+      the DoStatement in JStatement statement(). I also checked how <WHILE> was used, which was already implemented in
+      j--.jj. As, I was a little confused in implementing <WHILE> for the DoStatement. After implementing the <WHILE>
+      correctly my JDoStatement was working fine.
+
+      Issues and resolution: I did not get any error with problem
+
+   Problem 9 (For Statement)
+      Approach: for this problem, I had to struggle a little, as I did not do for statement in project 3. I first tried
+      to understand how forInit is being used in the grammar, and why we have to use the array list. To be sure about it,
+      why we were using array list for forInit and forUpdate. I asked professor swami, if we are using the array list so
+      the loop scan from the list and update accordingly. Professor Swami, guided with the use of ArrayList and also
+      told me to use LOOKAHEAD for statementExpression() to check if its statementExpression(). I created the forInit and
+      forUpdate method, by following the grammar and putting them in the right order. In the forInit, I created the
+      ArrayList for statement, as statement have 0 and more occurrences, and JVariableDeclarator. I implemented the
+      LOOKAHEAD for the statementExpression() to check if it's a statement expression, and implemented <COMMA> by
+      following the grammar. Also appended the current state from the list to statement.For variable declarator, I used
+      JVariableDeclaration localVariableDeclarationStatement() as a model to implement it. In case of forUpdate, I
+      created a new JStatement ArrayList, so the for loop can be updated according to the size of the list, and followed
+      the grammar. After this, I implemented the FOR, and used LPAREN, forInit(), SEMI, expression(), SEMI, update(),
+      RPAREN and body accordingly with the grammar in the FOR.
+
+      Issues and resolution:  I got this Error: Line 670, Column 10: Undefined lexical token name "forInit". As I started
+      implementing the FOR without making the forInit method. I resolved this error after implementing the forInit()
+      method. The second error, I got was .java:790: error: incompatible types: JVariableDeclaration cannot be converted
+      to JExpression. I resolved this error by properly using the state.add(new JVariableDeclaration()), as professor
+      Swami pointed out I was not using Java syntax correctly.  Third error, I got was .java:816: error: incompatible
+      types: JStatement cannot be converted to JExpression.  I resolved this error by properly using the ArrayList and
+      changing from ArrayList<JExpression> to ArrayList<JStatement>. I figured this out by thinking that, I am using the
+      ArrayList because of statements in the first place.
+
+
+   Problem 10 (Break Statement)
+      Approach: for this problem, I followed the grammar and implemented the <BREAK> and <SEMI> under the JStatement
+      statement(), and also implemented  the JBreakStatement with argument line. For <SEMI>, I used the other <SEMI>
+      implemented in j--.j as model to solve this problem.
+
+      Issues and resolution: I did not get any error for this problem
+
+   Problem 11 (Continue Statement)
+      Approach: I followed the grammar and implemented the <CONTINUE> and <SEMI> under the JStatement
+      statement(), and also implemented  the JContinueStatement with argument line. For <SEMI>, I used the other <SEMI>
+      implemented in j--.j as model to solve this problem.
+
+      Issues and resolution: I did not get any error for this problem
+
+   Problem 12 (Switch Statement)
+      Approach: ...
+
+      Issues and resolution: ...
+
+   Problem 13 (Exception Handlers)
+      Approach: ...
+
+      Issues and resolution: ...
+
+   Problem 14 (Interface Type Declaration)
+      Approach: ...
+
+      Issues and resolution: ...
+
+4. Did you receive help from anyone? List their names, status (classmate, 
+   CS451/651 grad, TA, other), and the nature of help received.
+
+   Name               Status       Help Received
+   James               TA          fixing problem 1, 4 and 5 errors
+
+   Swami              Professor    help in problem 9 and the use of LOOKAHEAD
+
+5. List any other comments here. Feel free to provide any feedback on how
+   much you learned from doing the assignment, and whether you enjoyed
+   doing it.
+
+   ...

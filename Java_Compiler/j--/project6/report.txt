@@ -1,0 +1,40 @@
+1. Enter the number of hours it took you to complete the project between
+   the <<< and >>> signs below (eg, <<<10>>>).
+
+   <<<20 >>>
+   
+2. Enter the difficulty level (1: very easy; 5: very difficult) of the project
+   between the <<< and >>> signs below (eg, <<<3>>>).
+
+   <<<5>>>
+
+3. Provide a short description of how you approached each problem, issues you 
+   encountered, and how you resolved those issues.
+
+   Problem 1 (Register Allocation by Graph Coloring)
+      Approach: for this problem, I first watched the Register Allocation videos, and followed the pdf instructions
+      to understand what I need to do for the project. I used NNaiveRegisterAllocator.java as a model to understand, how
+      to access an interval for virtual registers. The liveness intervals were already implemented, and we called them
+      using BuildInterval method. I implemented the graph using hashmap and set to add vertex, edges and also to
+      check if there is a vertex or not for the interference graph. I wasn't sure how to build the adjacency matrix, I
+      asked james, and he told me use the helper function isCollision(NInterval a, NInterval b) to make matrix and also
+      to check if the intervals are overlapping.
+
+      Issues and resolution: one of the  issues I got was when I was implementing the hashmap, as I was getting error
+      related to cannot resolve symbol or the method was not implemented properly. I google the implementation of HashMap
+      to resolve those issues. The other issue, I was getting was in implementing the isCollision and making adjacency
+      matrix, which james helped me to figure it out
+
+4. Did you receive help from anyone? List their names, status (classmate, 
+   CS451/651 grad, TA, other), and the nature of help received.
+
+   Name               Status       Help Received
+   James               TA          problem 1
+
+   ...                ...          ...
+
+5. List any other comments here. Feel free to provide any feedback on how
+   much you learned from doing the assignment, and whether you enjoyed
+   doing it.
+
+   ...

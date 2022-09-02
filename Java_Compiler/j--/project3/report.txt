@@ -1,0 +1,116 @@
+1. Enter the number of hours it took you to complete the project between
+   the <<< and >>> signs below (eg, <<<10>>>).
+
+   <<<20>>>
+   
+2. Enter the difficulty level (1: very easy; 5: very difficult) of the project
+   between the <<< and >>> signs below (eg, <<<3>>>).
+
+   <<<4>>>
+
+3. Provide a short description of how you approached each problem, issues you 
+   encountered, and how you resolved those issues.
+
+   Problem 1 (Long and Double Basic Types):
+      Approach: for problem1, first I checked the direction on the pdf, which was to modify long and double in
+      parser.java, and then I checked the grammar to see, which methods I have to modify for long and double accordingly.
+      I modified parser.java, according to what I learned in project1, when I was implementing the methods for operators
+      in parser.java. I made else if cases and used have() to parse double and long respectively under basictype().I
+      also saw the piazza post by professor Swami, to make sure to modify basicType(), seeBasicType(),seeReferenceType(),
+      and statementExpression() in Parser.java. I noticed that, I didn't modify seeReferenceType() and seeBasicType().
+
+      Issues and resolution: I was getting error --> Literal sought where double found. After looking at the piazza post
+      by professor swami. I made sure to modify basicType(), seeBasicType(),seeReferenceType(),and statementExpression()
+      in Parser.java. After modifying basicType(), seeBasicType(),seeReferenceType(),and statementExpression() for
+      double and long properly by using the precedence rule according to grammar I was able to resolve my errors
+
+   Problem 2 (Operators):
+      Approach: for problem2, first I checked the direction on the pdf, which was to modify operators in
+      parser.java and some of those operator were already implemented in parser.java from project1. I checked the grammar
+      to see, which methods I have to modify and in which method I have to put them according to grammar and precedence
+      rule. A lot of tokens like ALSHIFT_ASSIGN, AND_ASSIGN, ARSHIFT_ASSIGN, DIV_ASSIGN and more from project 3 pdf were
+      implemented using else if() cases under AssignmentExpression according to the grammar. I made sure that I don't
+      repeat same mistake in problem and checked every operator for their corresponding method in the grammar and
+      modified them accordingly.
+
+      Issues and resolution: i didn't get any issues for problem 2
+
+   Problem 3 (Conditional Expression):
+      Approach: for problem3, first I checked the grammar for conditionalExpression and saw it's position and precedence
+      to figure out, where it should be implemented. In parser.java, I noticed there wasn't any conditionalExpression()
+      method after assignmentExpression(). So, I implemented the conditionalExpression() method according to the grammar.
+      Second, I initiated the scanner.token.line(), conditionOrexpression method, expression() and mustbe(COLON) to scan
+      and parse colon--> ':' following the question --> '?' according to the grammar and returned a new
+      JConditionalExpression.
+
+      Issues and resolution: I got the errors--> 'jminusminus.JConditionalExpression' cannot be applied to '()',
+      project3/ConditionalExpression.java:7: error: "Tails" found where ; sought and project3/ConditionalExpression.java
+      :7: error: Invalid statement expression; it does not have a side-effect. I was trying to fix my JConditional-
+      Expression return statement, as the error was pointing something is wrong in my return new
+      JConditionalExpression(). I tried to fix it by comparing it with JConditionalOrExpression, but it didn't help me.
+      However, I knew this by comparing both the methods that I am missing something in my JconditionalExpression().
+      I asked and showed mty code to James(TA) on piaza for further help. He told me I am missing the arguments in the
+      return new JConditionalExpression(), and I should fill them up to deal with these errors. After putting my
+      arguments in my return statement of JConditionalExpression, I was able to resolve my errors
+
+   Problem 4 (Do Statement):
+      Approach: for problem 4, first I checked the grammar to see under which method I have to implement the Do statement.
+      According to the grammar I implemented the have() to scan and parse the DO after LCURLY, according to the
+      precedence rule of the grammar. Second, I was making a if statement for the token WHILE using have(), but it was
+      not working and I was confused what's happening, then I saw under the Statement() how IF, RETURN, SEMI have been
+      implemented to get any hints. I saw mustbe() for SEMI and tried to understand it and also asked my classmate Shuja
+      about mustbe() and what is it doing in the code. He explained me mustbe() is parsing the tokens. I looked at the
+      grammar again and saw the WHILE and thought after JStatement statement = statement(); I should parse the While
+      using mustbe(). After that I initialized the parExpression method and parsed SEMI using the mustbe() according to
+      the grammar and this is how i was able to solve problem 4
+
+      Issues and resolution: In the beginning when I was using the if statement for the WHILE. I was getting the error
+      for variable test not found, which I used to initialize the parseExpression() method. Even though the
+      parseExpression() and the return new JDoStatement() under the same else if statement for Do. After understanding
+      what mustbe() do in the code from Shuja. I tried to use mustbe() for WHILE and SEMI,as how it was used for other
+      cases in Statement() from the grammar. I was able to resolve my error.
+
+
+   Problem 5 (For Statement):
+      Approach: ...
+
+      Issues and resolution: ...
+
+   Problem 6 (Break Statement):
+      Approach: ...
+
+      Issues and resolution: ...
+
+   Problem 7 (Continue Statement):
+      Approach: ...
+
+      Issues and resolution: ...
+
+   Problem 8 (Switch Statement):
+      Approach: ...
+
+      Issues and resolution: ...
+
+   Problem 9 (Exception Handlers):
+      Approach: ...
+
+      Issues and resolution: ...
+
+   Problem 10 (Interface Type Declaration):
+      Approach: ...
+
+      Issues and resolution: ...
+
+4. Did you receive help from anyone? List their names, status (classmate, 
+   CS451/651 grad, TA, other), and the nature of help received.
+
+   Name               Status       Help Received
+   James               TA           problem3 missing arguments for JConditionalExpression()
+
+   Shuja               Classmate          problem4 understanding what mustbe() do
+
+5. List any other comments here. Feel free to provide any feedback on how
+   much you learned from doing the assignment, and whether you enjoyed
+   doing it.
+
+   ...
