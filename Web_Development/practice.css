@@ -1,0 +1,52 @@
+body {
+    background-image: url('test.gif');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100%100%
+}
+h1 {
+    background-color:aquamarine
+}
+h2 {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+h3 {
+    text-align:center; color: blue;
+}
+h4 {
+    font-size:30px; 
+    border: 6px solid greenyellow; 
+    color:red;
+    padding: 10px;
+    margin: 10px;
+}
+h5 {
+    color:brown;
+}
+p {
+    color:red
+ }
+
+#one{
+    color:blue; 
+
+}
+#two {
+    background-color:darkmagenta
+}
+#three { 
+    border: 1px solid;
+    border-radius: 10px;
+    width: 10%;
+    background-color: rgb(0, 255, 136);
+    border-style: solid;
+    border-color: rgb(0, 0, 255);
+    padding-top: 10px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    padding-right: 40px;
+    
+   
+    
+}
+

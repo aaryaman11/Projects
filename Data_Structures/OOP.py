@@ -192,21 +192,48 @@ print(list)
 from collections import defaultdict
 
 class Solution:
-    def isValidSudoku(self, board):
+       def mySqrt(self, x: int) -> int:
+        #return int(math.sqrt(x))
+        # Binary search approach
         l = 0
-        r = l+1
-        # no same number in the sub grid
-        for i in range(len(board)):
-            for j  in range(len(board)):
-                if board[j][l] == board[j][r]:
-                    return False
-                l += 1
-                    
+        r = x
+        if x == 1 or x == 0:
+                return x  
+        while l < r:
+            m = l+r//2
+            if m*m > x:
+                r = m
+            if m*m < x:
+                l = m
+            if m*m == x:
+                return m
+            
+class Codec:
+    def encode(self, strs):
+        """Encodes a list of strings to a single string.
+        """
+        encode = ""
+        for e in strs:
+            encode += str(len(e)) + "#" + e
+        return encode
 
+    def decode(self, s: str):
+        """Decodes a single string to a list of strings.
+        """
+        decode, i = [], 0
+        while i < len(s):
+            j = i
+            while s[j] != "#":
+                j += 1
+            length = int(s[i:j])
+            decode.append(s[j+1:j+1 + length])
+            i = j+ 1+length
+        return decode
+co = Codec()
+print(co.decode("5#Hello5#World"))
         
         
         
 
 test  = Solution()
-print(test.isValidSudoku([["5","3",".",".","7",".",".",".","."],["6",".",".","1","9","5",".",".","."],[".","9","8",".",".",".",".","6","."],["8",".",".",".","6",".",".",".","3"],["4",".",".","8",".","3",".",".","1"],["7",".",".",".","2",".",".",".","6"],[".","6",".",".",".",".","2","8","."],[".",".",".","4","1","9",".",".","5"],[".",".",".",".","8",".",".","7","9"]]))
-
+print(test.mySqrt(8))
