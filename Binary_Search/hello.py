@@ -6,3 +6,6 @@ print(sorted(z))
 
 x  =  'hippo'
 print(x.count('i'))
+
+
+

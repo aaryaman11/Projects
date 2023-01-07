@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Testing Javascript
+        </title>
+        
+    </head>
+    <style> 
+    .city {
+        background-color: red;
+        border: 2px solid black;
+        
+    }
+    </style>
+    <body>
+        <button onclick="removing()">Hide elements</button>
+        <button onclick="showing()">show elements</button>
+        
+        <h2 class = "city">London</h2>
+        <p>First Capital</p>
+        <h2 class = "city">Paris</h2>
+        <p>Paris is the capital of France.</p>
+        <h2 class="city">Tokyo</h2>
+        <p>Tokyo is the capital of Japan.</p>
+        <script>
+            function removing() {
+                var x = document.getElementsByClassName("city");
+                for (var i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";
+                }
+            }
+            function showing() {
+                var y = document.getElementsByClassName("city");
+                for(i = 0; i < y.length; i++) {
+                    y[i].style.display = "block"
+                }
+            }
+        </script>
+    </body>
+</html>
