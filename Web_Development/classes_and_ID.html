@@ -37,8 +37,23 @@
             <h3>Chapter 8</h3>
             <h3>Chapter 9</h3>
             <h2>Chapter 11</h2>
-        <p>This chapter explains ba bla bla</p>
-        <p>Testing links</p>
+            <p>This chapter explains ba bla bla</p>
+            <p>Testing links</p>
+            <h2 class = "city1"> Zebra</h2>
+            <p>Zebra is an animal</p>
+            <h2 class = "city1"> Tiger</h2>
+            <p>Tiger is an animal</p>
+            <h2 class = "city1"> Lion</h2>
+            <p>Lion is an animal</p>
+        <button onclick="myfunction()">Hide elements</button>
+        <script>
+            function myfunction() {
+                var x  = document.getElementsByClassName("city1");
+                for (var i = 0; i < x.length; i++) {
+                    x[i].style.display = "none"
+                }
+            }
+        </script>
         </body>
 
     </head>
