@@ -46,6 +46,10 @@
             <h2 class = "city1"> Lion</h2>
             <p>Lion is an animal</p>
         <button onclick="myfunction()">Hide elements</button>
+        <button onclick="mytesting()">click the button</button> 
+        <p id="demo"> This is a demostration</p>
+        <p id="demo1">Testing wtih different colors and checking javascript</p>
+        <button onclick="mystyling()"> Click the button to change the color!</button>
         <script>
             function myfunction() {
                 var x  = document.getElementsByClassName("city1");
@@ -53,7 +57,19 @@
                     x[i].style.display = "none"
                 }
             }
+            function mytesting() {
+                document.getElementById("demo").innerHTML = "Testing javascript!";
+            }
+            function mystyling() {
+                document.getElementById("demo1").style.fontSize = "20px";
+                document.getElementById("demo1").style.color = "blue";
+                document.getElementById("demo1").style.backgroundColor = "green";
+
+            }
         </script>
+        <!--id's are unique and can be used by per element, while classes can be used with multiple elements-->
+        <iframe src="https://www.facebook.com/" style="border:3px solid pink;" name="TestingIframe" title="Iframe example"></iframe>
+        <p><a href="https://www.w3schools.com/html/html_iframe.asp" target="TestingIframe">w3schools.com</a></p>
         </body>
 
     </head>
