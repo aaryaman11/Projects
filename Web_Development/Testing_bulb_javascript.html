@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        Testing bulb feature
+    </title>
+    <body>
+        <h1>First working javascript</h1>
+        <script>
+            function light(sw) {
+                var pic
+                if (sw ==0) {
+                    pic = "bulboff.jpg"
+                }
+                else {
+                    pic = "bulbon.jpg"
+                }
+                document.getElementById("demo").src = pic;
+
+            }
+        </script>
+        <img id="demo" src="bulboff.jpg" width="80" height="160">
+        <p>
+            <button onclick="light(1)">light on</button>
+            <button onclick="light(0)">light off</button>
+        </p>
+    </body>
+</head>
+</html>
