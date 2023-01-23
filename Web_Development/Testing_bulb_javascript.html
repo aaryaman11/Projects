@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+    <!--<base href="https://www.w3schools.com/html/html_head.asp" target="_blank"> the browser will look into base url for images if need images--> 
     <title>
         Testing bulb feature
     </title>
@@ -20,6 +23,12 @@
             }
         </script>
         <img id="demo" src="bulboff.jpg" width="80" height="160">
+        <picture>
+            <source srcset="flower3.jpg" media="(max-width:600px)">
+            <source srcset="flower2.jpg" media="(max-width:1500px)">
+            <source srcset="flower1.jpg">
+            <img src="flower3.jpg" alt="Flower">
+        </picture>
         <p>
             <button onclick="light(1)">light on</button>
             <button onclick="light(0)">light off</button>
