@@ -44,12 +44,21 @@
             <label for="lname">Last Name</label><br>
             <input type="text" name="lname" value="parker"><br><br>
             <input type="submit" value="submit"><br><br>
-            <input type="radio" name="options" value="HTML">
-            <label for="options">HTML</label><br>
-            <input type="radio" name="options" value="CSS">
-            <label for="options">CSS</label><br>
-            <input type="checkbox" name="testing_checkbox" value="testing">
-            <label name="testing_checkbox">Checkbox</label>
+            <input type="radio" id="html" name="fav_language" value="HTML">
+            <label for="html">HTML</label><br>
+            <input type="radio" id="css" name="fav_language" value="CSS">
+            <label for="css">CSS</label><br>
+            <input type="checkbox"  id="testing_checkbox" name="testing_checkbox" value="checkbox">
+            <label name="testing_checkbox">Checkbox</label><br>
+            <label for="choices">Choose the right choice</label>
+            <select id="choices" name="choices">
+                <option value="stay">Stay here!</option>
+                <option value="leave">leave the place!</option>
+                <option value="discuss">Further Discussion!</option>
+                <option value="alone">Am I alone?</option>
+            </select>
+            <input type="submit" value="submit">
+
             
         </form>
 
