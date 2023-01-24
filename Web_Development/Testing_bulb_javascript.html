@@ -39,11 +39,14 @@
             z = x + y
         </code>
         <form action="/action_page.php" target="_blank" autocomplete="on">
+            <fieldset>
+            <legend>Personalia:</legend>
             <label for="fname">First Name</label><br>
             <input type="text" name="fname" value="Jo"><br>
             <label for="lname">Last Name</label><br>
             <input type="text" name="lname" value="parker"><br><br>
             <input type="submit" value="submit"><br><br>
+            </fieldset>
             <input type="radio" id="html" name="fav_language" value="HTML">
             <label for="html">HTML</label><br>
             <input type="radio" id="css" name="fav_language" value="CSS">
@@ -57,7 +60,15 @@
                 <option value="discuss">Further Discussion!</option>
                 <option value="alone">Am I alone?</option>
             </select>
-            <input type="submit" value="submit">
+            <input type="submit" value="submit"><br><br>
+            <textarea name="message" rows="10" cols="30">testing the message box.</textarea><br><br>
+            <input list="browser" name="browser">
+            <datalist id="browser">
+            <option value="Exploer"></option>
+            <option value="Firefox"></option>
+            <option value="Chrome"></option>
+            <option value="Safari"></option>
+            </datalist>
 
             
         </form>
