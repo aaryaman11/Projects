@@ -1,14 +1,29 @@
 body{
-    background-color: blue;
+    background: rgba(0, 0, 288, 1) url(bulbon.jpg) right top no-repeat;/*all background feature in a single line*/
+    /*alpha channel for opacity of color*/
 
 }
 h1{
     color: burlywood;
 }
-p{
+p.check{
     color: beige;
-    font-size: 10px;
+    font-size: 50px;
     font-style: italic;
+    border-bottom: 10px solid purple;
+    
+    
+   
+}
+h2{
+    background-color: lightgreen;
+    opacity: 1.0;
+}
+h3{
+    background-image: url(flower1.jpg);
+    /*background-repeat:no-repeat; --> the image will not repeat*/
+    color:red
+    
 }
 *{
     text-align: center;

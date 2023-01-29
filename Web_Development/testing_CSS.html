@@ -8,12 +8,47 @@
         </title>
         <style>
            /*recent styling will be given preference(check CSS how to from w3school*/
+           p.normal{
+            border: 10px solid red;
+            padding: 10px;
+            border-radius: 1px
+           }
+           p.round{
+            border: 10px solid red;
+            padding: 10px;
+            border-radius: 5px
+           }
+           p.rounder{
+            border: 10px solid red;
+            padding:5px;
+            border-radius: 8px;
+           }
+           p.roundest{
+            border: 10px solid red;
+            padding: 5px;
+            border-radius: 25px
+           }
+           div{
+            border:1px solid black;
+            margin:auto;
+            background: yellow
+           }
         </style>
         <body>
             <h1>Checking out CSS</h1>
-            <p>Complete this now</p>
+            <p class="check">Complete this now</p>
              <!--* will affect every html element-->
-             <h2 style="color:brown; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Checking inline styling</h2>
+             <h2 style="color:brown; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;background-color: rgb(226, 220, 43);">Checking inline styling</h2>
+             <h2>Testing different background</h2>
+             <h3>testing background image for specific element</h3>
+             <p class="normal">Normal Border</p>
+             <p class="round">Round Border</p>
+             <p class="rounder">Rounder Border</p>
+             <p class="roundest">Roundest Border</p>
+             <div>Testing the  margin box, and trying to do things  quickly. 
+             This div element has a top margin of 25px, a right margin of 50px, a bottom margin of 75px, and a left margin of 100px. 
+             Different sizes margin lead to variations</div>
+
              
         </body>
     </head>
