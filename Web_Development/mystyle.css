@@ -25,6 +25,28 @@ h3{
     color:red
     
 }
+div{
+    border:1px solid black;
+    margin:auto;
+    background: yellow
+}
+.pad{
+    border: 2px solid black;
+    padding: 25px 50px 35px 40px;
+    background: lightblue;
+    width:300px;
+    box-sizing: border-box;
+}
+.box{
+    border: 20px solid orange;
+    background-color: grey;
+    padding: 10px;
+    margin:30px;
+    width:500px;
+    outline: 10px ridge yellow;
+    outline-offset: 10px; /*space between the border and the outline*/
+    text-align: justify;/*like news paper column with equal width */
+}
 *{
     text-align: center;
 } 
