@@ -28,7 +28,8 @@ h3{
 div{
     border:1px solid black;
     margin:auto;
-    background: yellow
+    background: yellow;
+    text-transform: lowercase;
 }
 .pad{
     border: 2px solid black;
@@ -36,6 +37,8 @@ div{
     background: lightblue;
     width:300px;
     box-sizing: border-box;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px purple;
 }
 .box{
     border: 20px solid orange;
@@ -46,6 +49,8 @@ div{
     outline: 10px ridge yellow;
     outline-offset: 10px; /*space between the border and the outline*/
     text-align: justify;/*like news paper column with equal width */
+    text-decoration: underline red wavy 3px;
+    text-transform: capitalize;
 }
 *{
     text-align: center;
