@@ -8,8 +8,8 @@ h1{
 }
 p.check{
     color: beige;
-    font-size: 50px;
-    font-style: italic;
+    font: italic 50px "Trirong", serif;
+
     border-bottom: 10px solid purple;
     
     
@@ -18,6 +18,8 @@ p.check{
 h2{
     background-color: lightgreen;
     opacity: 1.0;
+    font-weight: bold;
+    font-size: 2em /*32pixels(pixels/16 == 1em)*/
 }
 h3{
     background-image: url(flower1.jpg);
@@ -39,6 +41,7 @@ div{
     box-sizing: border-box;
     text-transform: uppercase;
     text-shadow: 2px 2px 4px purple;
+    
 }
 .box{
     border: 20px solid orange;
@@ -51,6 +54,29 @@ div{
     text-align: justify;/*like news paper column with equal width */
     text-decoration: underline red wavy 3px;
     text-transform: capitalize;
+}
+
+a:link{
+    text-decoration: none;
+}
+a:hover{
+    color:yellow;
+    text-decoration: underline;
+}
+.linkbox:link{
+    background-color: gold;
+    padding: 10px;
+    border:2px solid black;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    color:orangered
+
+}
+.linkbox:hover{
+    background-color: silver;
+    color: white;
+    cursor:grab;
 }
 *{
     text-align: center;
