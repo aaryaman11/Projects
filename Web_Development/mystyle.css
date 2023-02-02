@@ -27,7 +27,7 @@ h3{
     color:red
     
 }
-div{
+.low{
     border:1px solid black;
     margin:auto;
     background: yellow;
@@ -83,6 +83,38 @@ a:hover{
     padding: 5px;
     border:  2px solid darkgreen;
     background-color: lightgreen;
+}
+.container{
+    position: relative;
+
+}
+.blackbox{
+    position: relative;
+    z-index: 1;
+    border:2px solid black;
+    background-color: aqua;
+    height: 50px;
+    margin: 30px;
+}
+.graybox{
+    position: absolute;
+    z-index:2;
+    border:2px solid black;
+    background: gray;
+    height:60px;
+    width:70%;
+    left: 50px;
+    top: 50px;
+}
+.greenbox{
+    position: absolute;
+    z-index:3;
+    border:2px solid black;
+    background: green;
+    height:100px;
+    width:35%;
+    left: 270px;
+    top: -15px;
 }
 *{
     text-align: center;
