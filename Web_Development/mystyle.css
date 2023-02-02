@@ -1,5 +1,5 @@
 body{
-    background: rgba(0, 0, 288, 1) url(bulbon.jpg) right top no-repeat;/*all background feature in a single line*/
+    background: rgba(0, 10, 288, 1) url(bulbon.jpg) right top no-repeat;/*all background feature in a single line*/
     /*alpha channel for opacity of color*/
 
 }
@@ -77,6 +77,12 @@ a:hover{
     background-color: silver;
     color: white;
     cursor:grab;
+}
+.sticky{
+    position: sticky;
+    padding: 5px;
+    border:  2px solid darkgreen;
+    background-color: lightgreen;
 }
 *{
     text-align: center;
