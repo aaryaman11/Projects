@@ -34,6 +34,19 @@
             padding: 5px;
             border-radius: 25px
            }
+           .flex-container{
+            display:flex; /*adjust length of a box according to the  bigger box or check w3school*/
+            flex-wrap: nowrap;
+            background-color: dodgerblue;
+           }
+        .box {
+            background-color: #f1f1f1;
+            width: 50%;
+            margin: 10px;
+            text-align: center;
+            line-height: 75px;
+            font-size: 30px;
+           }
            
         </style>
         <body>
@@ -50,8 +63,8 @@
              <div class="low">Testing the  margin box, and trying to do things  quickly. 
              This div element has a top margin of 25px, a right margin of 50px, a bottom margin of 75px, and a left margin of 100px. 
              Different sizes margin lead to variations</div><br>
-             <div class="pad">Testing the padding space</div>
-             <div class="box">Creating a box model. Also testing the alignment like the newspaper and magzine</div>
+             <div class="pad">Testing the padding space</div><br>
+             <div class="box">Creating a box model. Also testing the alignment like the newspaper and magzine</div><br>
              <i class="fas fa-rocket" style="color:red;font-size:60px;"></i> <!--i tag means  icon-->
              <p><b><a href="https://www.w3schools.com/css/tryit.asp?filename=trycss_link" target="_blank"> Checking this link</a></b></p>
              <a class="linkbox" href="https://www.w3schools.com/css/css_link.asp" target="_blank">testing link box</a><br><br>
@@ -62,6 +75,13 @@
                 <div class="blackbox">First box</div>
                 <div class="graybox">Second box</div>
                 <div class="greenbox">Third box</div>
+             </div><br><br>
+             <div class="scroll">You can use the overflow property when you want to have better control of the layout. 
+             The overflow property specifies what happens if content overflows an element's box.</div>
+             <h1> Flexible boxes</h1>
+             <div class="flex-container">
+                <div class="box">Box 1 - This is some text to make sure that the content gets really tall. This is some text to make sure that the content gets really tall.</div>
+                <div class="box">Box 2 - My height will follow Box 1.</div>
              </div>
 
              
