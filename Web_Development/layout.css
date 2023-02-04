@@ -38,4 +38,7 @@
 .menu li:hover {
     background-color: #0099cc;
   }
+  div > p {
+    background-color: yellow;
+  }
   
