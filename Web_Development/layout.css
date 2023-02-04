@@ -38,7 +38,16 @@
 .menu li:hover {
     background-color: #0099cc;
   }
-  div > p {
+  /*div > p {
     background-color: yellow;
+  }*/
+  .para{
+    display:none;
+    background-color: yellow;
+    color:black
+  }
+  .show:hover .para{
+    display:block;
+    font: 20px
   }
   
