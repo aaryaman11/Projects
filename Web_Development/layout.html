@@ -7,6 +7,17 @@
         <title>
             Layout testing
         </title>
+        <style>
+            /*pseudo elements */
+            q:lang(no){
+                quotes:  "~" "~";
+            }
+            .test:hover::first-line{
+                color:red;
+                font-size: 200px;
+
+            }
+        </style>
         <body>
             <div class="header">
                 <h1>Chania</h1>
@@ -34,7 +45,10 @@
               </div>
               <div class="show">Let's test it out
                 <p class="para">Testing the function</p>
-              </div>
+              </div><br>
+              <!--:lang defines the quotation marks for q elements -->
+              <p>some text <q lang="no">Testing the quotation</q></p>
+              <p class="test"> Testing the pseudo element.Some more text. And even more, and more, and more, and more, and more, and more, and more, and more, and more, and more, and more, and more.</p>
 
         </body>
     </head>
