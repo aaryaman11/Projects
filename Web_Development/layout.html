@@ -24,6 +24,42 @@
             .aft::after{
                 content: url("bulboff.jpg")
             }
+            ::marker{
+                color:red;
+                font-size:25px;
+            }
+            ::selection{
+                background-color: red;
+                color:aquamarine
+            }
+            img{
+                opacity: 0.5;
+            }
+            img:hover{
+                opacity:1.0;
+              
+            }
+            .nav{
+                list-style-type: none;
+                margin:0;
+                padding: 0;
+                width: 200px;
+                background-color: antiquewhite;
+                border: 2px solid black;
+                
+            }
+            li a {
+                display: block;
+                padding: 8px 16px;
+            }
+        
+            li a:hover:not(.active){
+                background-color: rgb(194, 107, 7);
+
+            }
+            li a.active{
+                background-color: green;
+            }
         </style>
         <body>
             <div class="header">
@@ -58,7 +94,18 @@
               <p class="test"> Testing the pseudo element.Some more text. And even more, and more, and more, and more, and more, and more, and more, and more, and more, and more, and more, and more.</p>
               <h1 class="befo">The before pseudo element</h1>
               <h1 class="aft">The after pseudo element</h1>
-
+              <ul>
+                <li>test1</li>
+                <li>test2</li>
+                <li>test3</li>
+              </ul>
+              <img src="flower2.jpg" alt="flower-image">
+              <ul class="nav">
+                <li><a class="active" href="#home"></a>Home</li>
+                <li><a href="#news"></a>News</li>
+                <li><a href="#contact"></a>Contact</li>
+                <li><a href="#about"></a>about</li>
+              </ul>
         </body>
     </head>
 </html>
