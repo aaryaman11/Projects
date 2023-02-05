@@ -17,6 +17,13 @@
                 font-size: 200px;
 
             }
+            .befo::before{
+                content: url("bulbon.jpg");
+                font-size: 1px;
+            }
+            .aft::after{
+                content: url("bulboff.jpg")
+            }
         </style>
         <body>
             <div class="header">
@@ -49,6 +56,8 @@
               <!--:lang defines the quotation marks for q elements -->
               <p>some text <q lang="no">Testing the quotation</q></p>
               <p class="test"> Testing the pseudo element.Some more text. And even more, and more, and more, and more, and more, and more, and more, and more, and more, and more, and more, and more.</p>
+              <h1 class="befo">The before pseudo element</h1>
+              <h1 class="aft">The after pseudo element</h1>
 
         </body>
     </head>
