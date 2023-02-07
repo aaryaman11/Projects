@@ -62,16 +62,19 @@
   .nav1 li {
     float:left
   }
-  .nav1 li a, dropbtn{
+  .nav1 li a, .dropbtn{
+    display: inline-block;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
   }
-  .nav1 li a:hover, .dropdown:hover{
+  li a:hover, .dropdown:hover .dropbtn{
     background-color: darkgray;
   }
-  
-   .dropdown-content{
+  li.dropdown{
+    display: inline-block;
+  }
+  .dropdown-content{
     display:none;
     position:absolute;
     background-color: #0099cc;
@@ -84,11 +87,12 @@
     display: block;
     text-align: left;
   }
-  .dropdown-content a:hover{
-    background-color: #4cc0e7;
-  }
+ 
   .dropdown:hover .dropdown-content{
     display: block;
+  }
+  .dropdown-content a:hover{
+    background-color: #4cc0e7;
   }
 
   
