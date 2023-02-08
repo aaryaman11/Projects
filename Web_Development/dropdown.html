@@ -41,6 +41,18 @@
             .dropdown1:hover .dropbtn-content{
                 display: block;
             }
+            a[target]{
+                background-color: green;
+            }
+            [title~=flower]{
+                border:3px solid blue
+            }
+            [class|=top]{ /*https://www.w3schools.com/css/css_attribute_selectors.asp*/
+                background-color: yellow;
+            }
+            [class$=test]{
+                background-color: orange;
+            }
 
         </style>
     </head>
@@ -59,5 +71,16 @@
                 <div class="text-image">Bright ideas</div>
             </div>
         </div>
+        <a href="https://www.w3schools.com" >Testing</a>
+        <a href="attribute function" target="_blank">Testing attribute function</a>
+        <a href="http://www.wikipedia.org" target="_top">wikipedia.org</a><br>
+        <img src="flower1.jpg"title="solid flower" height="150px" width="100px">
+        <h1 class="top-header">Welcome</h1>
+        <p class="top-text">Hello world!</p>
+        <p class="topcontent">Are you learning CSS?</p>
+        <div class="first_test">The first div element.</div>
+        <div class="second">The second div element.</div>
+        <div class="my-test">The third div element.</div>
+        <p class="mytest">This is some text in a paragraph.</p>
     </body>
 </html>
