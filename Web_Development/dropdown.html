@@ -53,6 +53,29 @@
             [class$=test]{
                 background-color: orange;
             }
+            input[type=text]{
+                display: inline-block;
+                padding: 12px 20px;
+                width:100%;
+                margin:8px 0;
+                border: 1px solid black;
+                border-radius: 5px;
+                box-sizing: border-box;
+            }
+            input[type=submit]{
+                width:100%;
+                background-color: green;
+                padding:12px 20px;
+                margin:8px 0;
+                border-radius: 4px;
+                border:none;
+                cursor:pointer;
+            }
+            .form1{
+                background-color: lightgray;
+                border-radius: 4px;
+                padding:20px;
+            }
 
         </style>
     </head>
@@ -82,5 +105,20 @@
         <div class="second">The second div element.</div>
         <div class="my-test">The third div element.</div>
         <p class="mytest">This is some text in a paragraph.</p>
+        <div class="form1">
+            <form action="/action_page.php" method="get">
+                <label for="first_name">First Name</label>
+                <input type="text" id="first_name" name="firstname" placeholder="your name">
+                <label for="last_name">Last Name</label>
+                <input type="text" id="last_name" name="lastname" placeholder="your last name">
+                <label for="country">Country</label>
+                <select id="country" name="country">
+                    <option value="United States">United States</option>
+                    <option value="Canada">Canada</option>
+                    <option value="Russia">Russia</option>
+                </select>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
     </body>
 </html>
