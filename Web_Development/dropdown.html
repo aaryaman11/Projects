@@ -88,6 +88,43 @@
                 counter-increment: section;
                 content: "Section " counter(section) ": ";
             }
+            .header{
+                background-color: antiquewhite;
+                text-align: center;
+                padding:20px;
+            }
+            .nav{
+                background-color: black;
+                overflow: hidden;
+            }
+            .nav a{
+                color: white;
+                float:left;
+                display:block;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+            .nav a:hover{
+                background-color: white;
+                color:black;
+                
+            }
+            .column{
+                float:left;
+                padding:16px;
+                width:33.3%;
+            }
+            .row{
+                content:"";
+                display:table;
+                clear:both;
+            }
+            @media screen and (max-width:600px) { /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+                .column{
+                    width:100%;
+                }
+            }
 
         </style>
     </head>
@@ -137,6 +174,35 @@
         <h2>JavaScript Tutorial</h2>
         <h2>Python Tutorial</h2>
         <h2>SQL Tutorial</h2>
-      
+
+        <div class="header">
+            <h1>Header</h1>
+        </div>
+        <div class="nav">
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+        </div>
+        <div class="row">
+            <div class="column">
+                <h2>Column</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus 
+                   venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, 
+                   purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+            </div>
+            <div class="column">
+                <h2>Column</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. 
+                   Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, 
+                   risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+            </div>
+              
+            <div class="column">
+                <h2>Column</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. 
+                   Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget 
+                   aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+            </div>
+        </div>
     </body>
 </html>
