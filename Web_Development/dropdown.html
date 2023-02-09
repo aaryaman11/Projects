@@ -81,6 +81,13 @@
             input[type=submit]:hover{
                 background-color: darkgreen;
             }
+            body{
+                counter-reset: section;
+            }
+            h2::before{
+                counter-increment: section;
+                content: "Section " counter(section) ": ";
+            }
 
         </style>
     </head>
@@ -125,7 +132,11 @@
                 <input type="submit" value="Submit">
             </form>
         </div>
-        
+        <h2>HTML Tutorial</h2>
+        <h2>CSS Tutorial</h2>
+        <h2>JavaScript Tutorial</h2>
+        <h2>Python Tutorial</h2>
+        <h2>SQL Tutorial</h2>
       
     </body>
 </html>
