@@ -142,6 +142,23 @@
                 background-size: 100px 80px;
                 padding:15px;
             }
+            #example3 {
+                border: 10px dotted black;
+                padding: 35px;
+                background: yellow;
+                background-clip: content-box;
+            }
+            .sha{
+                color:greenyellow;
+                border:5px solid currentColor;
+                padding:15px;
+                box-shadow: 0px 0px 15px currentColor;
+            }
+            #grad1{
+                background-color: red;
+                background-image: linear-gradient(red, yellow);
+                
+            }
             
 
         </style>
@@ -225,5 +242,15 @@
         <h3 style="background-color:blueviolet">Cheking the important feature</h3>
         <p id="boom">testing the border image</p>
         <p id="check_img">Testing 2 background images join together</p>
+        <div id="example3">
+            <h2>Lorem Ipsum Dolor</h2>
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+        </div><br>
+        <div class="sha">
+            <p>This div's border color and shadow color is set to the current color value of the body element.</p>
+        </div>
+        <div id="grad1">
+            <p>This linear gradient starts red at the top, transitioning to yellow at the bottom:</p>
+        </div>
     </body>
 </html>
