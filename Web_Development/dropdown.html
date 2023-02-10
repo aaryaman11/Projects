@@ -159,6 +159,41 @@
                 background-image: linear-gradient(red, yellow);
                 
             }
+            #grad2{
+                height:50px;
+                background-color: red;
+                background-image: linear-gradient(to right, red, yellow);
+            }
+            #grad3{
+                height:50px;
+                width:80px;
+                background-color: red;
+                background-image: radial-gradient(circle, blue, green, red);
+            }
+            #grad4{
+                height:200px;
+                width:200px;
+                margin:10px;
+                background-color: red;
+                background-image: conic-gradient(blue, green, red);
+                float:left
+                
+            }
+            #grad5{
+                height:200px;
+                width:200px;
+                background-color: red;
+                background-image: repeating-conic-gradient(yellow 0deg 10deg, green 10deg 20deg, red 20deg  30deg);
+                border-radius: 50%;
+                float:left;
+                
+            }
+            .che{
+                width: 11em; 
+                border: 1px solid #000000;
+                word-wrap: break-word;
+            }
+            
             
 
         </style>
@@ -252,5 +287,10 @@
         <div id="grad1">
             <p>This linear gradient starts red at the top, transitioning to yellow at the bottom:</p>
         </div>
+        <div id="grad2"></div><br>
+        <div id="grad3"></div><br>
+        <div id="grad4"></div><br>
+        <div id="grad5"></div><br>
+        <p class="che">This paragraph contains a very long word: thisisaveryveryveryveryveryverylongword. The long word will break and wrap to the next line.</p>
     </body>
 </html>
