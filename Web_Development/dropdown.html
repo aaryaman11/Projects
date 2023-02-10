@@ -125,7 +125,24 @@
                     width:100%;
                 }
             }
-            h3{background-color: red !important;}
+            h3{
+                background-color: red !important;
+                border: 3px solid black;
+                border-radius: 15px 50px 30px;
+                width:50%
+            }
+            #boom{
+                border: 10px solid transparent;
+                border-image: url("flower1.jpg") 30 round;
+                padding: 15px;
+            }
+            #check_img{
+                border: 3px solid black;
+                background: url("bulbon.jpg") right bottom no-repeat,  url("flower2.jpg") left top no-repeat;
+                background-size: 100px 80px;
+                padding:15px;
+            }
+            
 
         </style>
     </head>
@@ -206,5 +223,7 @@
             </div>
         </div>
         <h3 style="background-color:blueviolet">Cheking the important feature</h3>
+        <p id="boom">testing the border image</p>
+        <p id="check_img">Testing 2 background images join together</p>
     </body>
 </html>
