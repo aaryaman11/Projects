@@ -193,6 +193,23 @@
                 border: 1px solid #000000;
                 word-wrap: break-word;
             }
+            #scal{
+                width:300px;
+                height:100px;
+                background-color: yellow;
+                border: 2px solid green;
+                box-shadow: 10px 10px 15px green;
+                transform: skewX(-20deg);
+            }
+            #matrix{
+                width:300px;
+                height:100px;
+                background-color: orange;
+                border: 2px solid blue;
+                box-shadow: -10px -10px 15px blue;
+                transform: matrix(1, -0.3, 0, 1, 10, 20);
+            }
+            
             
             
 
@@ -292,5 +309,7 @@
         <div id="grad4"></div><br>
         <div id="grad5"></div><br>
         <p class="che">This paragraph contains a very long word: thisisaveryveryveryveryveryverylongword. The long word will break and wrap to the next line.</p>
+        <div id="scal">This div element is skewed 20 degrees along the X-axis.</div>
+        <div id="matrix"> Using the matrix() method.</div>
     </body>
 </html>
