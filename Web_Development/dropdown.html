@@ -208,6 +208,29 @@
                 border: 2px solid blue;
                 box-shadow: -10px -10px 15px blue;
                 transform: matrix(1, -0.3, 0, 1, 10, 20);
+               
+            }
+            #transi{
+                background-color: red;
+                width:150px;
+                height:50px;
+                transition: width 4s;
+                float:right;
+            }
+            #transi:hover{
+                width:300px;
+            }
+            #motion{
+                margin:50px;
+                background-color: yellow;
+                width:150px;
+                height:50px;
+                transition: width 2s, height 2s, transform 2s;
+            }
+            #motion:hover{
+                width:300px;
+                height:300px;
+                transform:rotate(180deg);
             }
             
             
@@ -310,6 +333,8 @@
         <div id="grad5"></div><br>
         <p class="che">This paragraph contains a very long word: thisisaveryveryveryveryveryverylongword. The long word will break and wrap to the next line.</p>
         <div id="scal">This div element is skewed 20 degrees along the X-axis.</div>
-        <div id="matrix"> Using the matrix() method.</div>
+        <div id="matrix"> Using the matrix() method.</div><br>
+        <div id="transi">check the stretch</div>
+        <div id="motion">Check the rotation</div>
     </body>
 </html>
