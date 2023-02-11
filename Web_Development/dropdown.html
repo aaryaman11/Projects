@@ -232,6 +232,17 @@
                 height:300px;
                 transform:rotate(180deg);
             }
+            #animation{
+                width:100px;
+                height:100px;
+                background-color: purple;
+                animation-name: example;
+                animation-duration: 3s;
+            }
+            @keyframes example{
+                form {background-color: purple;}
+                to {background-color: green;}
+            }
             
             
             
@@ -336,5 +347,6 @@
         <div id="matrix"> Using the matrix() method.</div><br>
         <div id="transi">check the stretch</div>
         <div id="motion">Check the rotation</div>
+        <div id="animation">checking the animation</div>
     </body>
 </html>
