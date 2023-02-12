@@ -271,7 +271,52 @@
                 -webkit-box-reflect: right 10px;
                 
             }
-            
+            .position{
+                object-fit: cover;
+                object-position: 90% 100%; /*https://www.w3schools.com/css/css3_object-position.asp */
+            }
+            .mask{ /*w3schools.com/css/tryit.asp?filename=trycss3_mask-image*/
+                -webkit-mask-image: url("W3Schools.png");
+                -webkit-mask-repeat: no-repeat;
+            }
+            .button2 {
+            display: inline-block;
+            border-radius: 4px;
+            background-color: #f4511e;
+            border: none;
+            color: #FFFFFF;
+            text-align: center;
+            font-size: 28px;
+            padding: 20px;
+            width: 200px;
+            transition: all 0.5s;
+            cursor: pointer;
+            margin: 5px;
+            }
+            .button2 span {
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+            transition: 0.5s;
+            }
+
+            .button2 span:after {
+            content: '\00bb';
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            right: -20px;
+            transition: 0.5s;
+            }
+
+            .button2:hover span {
+            padding-right: 25px;
+            }
+
+            .button2:hover span:after {
+            opacity: 1;
+            right: 0;
+            }
             
             
 
@@ -382,5 +427,10 @@
             <p>inverted the colors of the picture</p>
         </div><br>
         <img class="duplicate" src="flower1.jpg" height="200px" width="200px">
+        <img class="position" src="flower2.jpg" alt="flower2" height="300" width="300">
+        <div class="mask">
+            <img src="flower3.jpg" alt="flower3.jpg" height="300" width="300">
+        </div>
+        <button class="button2" style="vertical-align:middle"><span>Hover </span></button>
     </body>
 </html>
