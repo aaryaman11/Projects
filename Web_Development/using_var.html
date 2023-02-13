@@ -15,10 +15,41 @@
             h1{
                 color:var(--blue);/*https://www.w3schools.com/css/css3_variables.asp*/
             }
+            #change{
+                --blue:red;
+                color:var(--blue);
+            }
+            .container{
+                --fontsize:25px;
+            }
+            .container{
+                color:var(red);
+                padding: 15px;
+                font-size: var(--fontsize);
+            }
+            #header{
+                border-bottom: 1px solid var(--blue);
+            }
+            @media screen and (min-width:450px){
+                .container{
+                    --fontsize:50px;
+                }
+                :root{
+                    --blue:green;
+                }
+            }
+          
             
         </style>
     </head>
     <body>
         <h1>Testing variable color</h1>
+        <h2 id="change">Changing the color of global variable by using local variable</h2>
+        <div class="container">
+            <h2 id="header">Lorem Ipsum</h2>
+            <p>When the browser's width is less than 450px, the font-size 
+            of this div is 25px. When it is 450px or wider, set the --fontsize variable 
+            value to 50px. Resize the browser window to see the effect.</p>
+        </div>
     </body>
 </html>
