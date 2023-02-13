@@ -317,7 +317,19 @@
             opacity: 1;
             right: 0;
             }
-            
+
+            .newspaper{
+                column-count: 3;
+                background-color: gray;
+                column-rule-style: solid;
+            }
+            .drag{
+                border:1px solid black;
+                padding:20px;
+                width:300px;
+                resize: horizontal;
+                overflow: auto;
+            }
             
 
         </style>
@@ -432,5 +444,17 @@
             <img src="flower3.jpg" alt="flower3.jpg" height="300" width="300">
         </div>
         <button class="button2" style="vertical-align:middle"><span>Hover </span></button>
+        <div class="newspaper"><br>
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut 
+            laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper 
+            suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit 
+            esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui 
+            blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend 
+            option congue nihil imperdiet doming id quod mazim placerat facer possim assum.
+            </div>
+        <div class="drag">
+            <p>Let the user resize only the width of this div element.</p>
+            <p>To resize: Click and drag the bottom right corner of this div element.</p>
+        </div>
     </body>
 </html>
