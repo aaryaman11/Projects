@@ -82,6 +82,11 @@
                 width:100px;
                 
             }
+            @media screen and (max-width:800px){
+                .flex-container1{
+                    flex-flow:column;
+                }
+            }
             
         </style>
     </head>
@@ -107,7 +112,7 @@
             <div>3</div>
             <div>4</div>
             <div>5</div>
-            <div style="flex-basis:200px">6</div>
+            <div style="flex:0 0 200px">6</div>
             <div>7</div>
             <div>8</div>
             <div>9</div>
@@ -115,8 +120,8 @@
         </div> <br>
         <div class="flex-container2">
             <div><h1>1</h1></div>
-            <div><h6>2</h6></div>
-            <div><h4>3</h4></div>
+            <div style="align-self:flex-start"><h6>2</h6></div>
+            <div style="align-self:flex-end"><h4>3</h4></div>
             <div><small>4</small></div>
         </div>
     </body>
