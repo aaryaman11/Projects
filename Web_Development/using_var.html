@@ -40,6 +40,9 @@
             }
             .flex-container{
                 display:flex;
+                flex-direction: column-reverse;
+                justify-content: space-between;
+                align-items: center;
                 background-color: blue;
             }
             .flex-container > div{
@@ -47,8 +50,38 @@
                 padding:20px;
                 margin:10px;
                 font-size:30px;
+                width:100px;
             }
-          
+            .flex-container1{
+                display:flex;
+                flex-flow: row-reverse wrap;
+                justify-content: center;
+                align-items: center;
+                background-color: blue;
+              
+            }
+            .flex-container1 > div{
+                background-color: white;
+                padding:20px;
+                margin:10px;
+                font-size:30px;
+                width:100px;
+            }
+            .flex-container2{
+                display:flex;
+                flex-flow: row wrap;
+                align-items: baseline;
+                background-color: green;
+            }
+            .flex-container2 > div{
+                background-color: white;
+                padding:20px;
+                margin:10px;
+                text-align: center;
+                font-size:30px;
+                width:100px;
+                
+            }
             
         </style>
     </head>
@@ -68,5 +101,23 @@
         </div>
         <p>A Flexible Layout must have a parent element with the <em>display</em> property set to <em>flex</em>.</p>
         <p>Direct child elements(s) of the flexible container automatically becomes flexible items.</p>
+        <div class="flex-container1">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div style="flex-basis:200px">6</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+            <div>10</div>
+        </div> <br>
+        <div class="flex-container2">
+            <div><h1>1</h1></div>
+            <div><h6>2</h6></div>
+            <div><h4>3</h4></div>
+            <div><small>4</small></div>
+        </div>
     </body>
 </html>
