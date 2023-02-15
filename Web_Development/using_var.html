@@ -116,9 +116,39 @@
                 height:70px
             }
             .header1{
+                margin-top: 8px;
                 background-color: purple;
                 color: white;
+                padding: 15px;
             }
+            .row3::after{
+                content:"";
+                clear:both;
+                display: block;
+            }
+            .menu1 li{
+                list-style-type:none;
+                background-color: rgb(32, 191, 191);
+                padding:8px;
+                margin-bottom: 7px;
+                color:white;
+                box-shadow: 1px 3px 5px black;
+             
+
+            }
+
+            .menu1 li:hover{
+                background-color: rgb(11, 226, 226);
+            }
+            [class*=col-]{
+                float:left;
+                padding:15px;
+            }
+            .menu1 ul{
+                margin:0;
+                padding:0;
+            }
+          
             /* For desktop: */
             .col-1 {width: 8.33%;}
             .col-2 {width: 16.66%;}
@@ -169,7 +199,7 @@
             <div style="align-self:flex-end"><h4>3</h4></div>
             <div><small>4</small></div>
         </div><br>
-        <div class="header">China</div>
+        <div class="header">Chaina</div>
         <div class="menu">
             <ul>
                 <li>The Flight</li>
@@ -184,16 +214,18 @@
             <p>Resize the browser window to see how the content respond to the resizing.</p>
         </div><br><br>
         <div class="update">Updated version</div><br>
-        <div class="header1">China</div>
-        <div class="menu1">
-            <ul>
-                <li>The Flight</li>
-                <li>The City</li>
-                <li>The Island</li>
-                <li>The Food</li>
-            </ul>
+        <div class="header1">Chania</div>
+        <div class="row3">
+            <div class="col-3 menu1">
+                <ul>
+                    <li>The Flight</li>
+                    <li>The City</li>
+                    <li>The Island</li>
+                    <li>The Food</li>
+                </ul>
+            </div>  
         </div>
-        <div class="main1">
+        <div class="col-9">
             <h1>The City</h1>
             <p>Chania is the capital of the Chania region on the island of Crete. The city can be divided in two parts, the old town and the modern city.</p>
             <p>Resize the browser window to see how the content respond to the resizing.</p>
