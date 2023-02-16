@@ -170,14 +170,17 @@
                 background-color: rgb(64, 64, 132);
                 width:50%;
             }
-            .grid-item{
+            .grid-container > div{
                 text-align: center;
                 border: 1px solid black;
                 opacity: 0.6;
                 width:auto;
                 background-color: rgb(17, 255, 0);
             }
-            .grid-item:hover{
+            .item5{
+                grid-area: 2/1/span 2/span 3;
+            }
+            .grid-container > div:hover{
                 background-color: rgb(3, 112, 8);
             }
             
@@ -255,15 +258,15 @@
         </picture>
         <p>Resize the browser width and the background image will change at 400px.</p>
         <div class="grid-container">
-            <div class="grid-item">1</div>
-            <div class="grid-item">2</div>
-            <div class="grid-item">3</div>
-            <div class="grid-item">4</div>
-            <div class="grid-item">5</div>
-            <div class="grid-item">6</div>
-            <div class="grid-item">7</div>
-            <div class="grid-item">8</div>
-            <div class="grid-item">9</div>
+            <div class="item1">1</div>
+            <div class="item2">2</div>
+            <div class="item3">3</div>
+            <div class="item4">4</div>
+            <div class="item5">5</div>
+            <div class="item6">6</div>
+            <div class="item7">7</div>
+            <div class="item8">8</div>
+            <div class="item9">9</div>
         </div>
     </body>
 </html>
