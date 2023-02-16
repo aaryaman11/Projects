@@ -10,13 +10,26 @@
     </head>
     <body>
         <p id="demo">A Paragraph.</p>
+        <p id="demo1">A number.</p>
+        <p id="demo2">A car.</p>
         <button type="button" onclick="myfunction()">Click me</button>
+        
         
         <script>function myfunction(){
             document.getElementById("demo").innerHTML= "Testing JavaScript";
-           alert("Testing JS")
-        }</script>
+            alert("Testing JS")
         
+            let a, b, c;
+            a=5;b=7;c=a+b;
+            document.getElementById("demo1").innerHTML= c;
+            // const values are immutable
+        }
+        {
+            let carName = "Audi";
+            document.getElementById("demo2").innerHTML = carName;
+        }
+        </script>
+       
        
 
     </body>
