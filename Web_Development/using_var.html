@@ -162,6 +162,24 @@
             .col-10 {width: 83.33%;}
             .col-11 {width: 91.66%;}
             .col-12 {width: 100%;}
+
+            .grid-container{
+                display:grid;
+                grid-template-columns: auto auto auto;
+                padding: 10px;
+                background-color: rgb(64, 64, 132);
+                width:50%;
+            }
+            .grid-item{
+                text-align: center;
+                border: 1px solid black;
+                opacity: 0.6;
+                width:auto;
+                background-color: rgb(17, 255, 0);
+            }
+            .grid-item:hover{
+                background-color: rgb(3, 112, 8);
+            }
             
         </style>
     </head>
@@ -236,5 +254,16 @@
             <img stc="flower3.jpg" alt="flower3" style="width:auto">
         </picture>
         <p>Resize the browser width and the background image will change at 400px.</p>
+        <div class="grid-container">
+            <div class="grid-item">1</div>
+            <div class="grid-item">2</div>
+            <div class="grid-item">3</div>
+            <div class="grid-item">4</div>
+            <div class="grid-item">5</div>
+            <div class="grid-item">6</div>
+            <div class="grid-item">7</div>
+            <div class="grid-item">8</div>
+            <div class="grid-item">9</div>
+        </div>
     </body>
 </html>
