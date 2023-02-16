@@ -3,6 +3,7 @@
     <head>
         <meta name="viewpoint" width="width=device-width", initial-scale="1.0">
         <link rel="icon" type="image/jpg" href="/Web_Development/javascript.png">
+        <script src="mysript.js"></script>
         <title>
             Javascript practice testing
         </title>
@@ -10,11 +11,13 @@
     <body>
         <p id="demo">A Paragraph.</p>
         <button type="button" onclick="myfunction()">Click me</button>
-        <script>
-            function myfunction(){
-                document.getElementById("demo").innerHTML= "Testing JavaScript";
-            }
-        </script>
+        
+        <script>function myfunction(){
+            document.getElementById("demo").innerHTML= "Testing JavaScript";
+           alert("Testing JS")
+        }</script>
+        
+       
 
     </body>
 </html>
