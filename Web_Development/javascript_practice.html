@@ -17,6 +17,7 @@
         <p id="demo5">operator.</p>
         <p id="demo6">BigNumber.</p>
         <p id="demo7">Boolean.</p>
+        <p id="demo8">calculation.</p>
         <button type="button" onclick="myfunction()">Click me</button>
         
         
@@ -60,6 +61,13 @@
             let y = 5;
             let z = 9;
             document.getElementById('demo7').innerHTML = (x==y) +"<br>"+(y==z);
+        }
+        {
+            var k = myfunction(5,4);
+            document.getElementById('demo8').innerHTML = k;
+            function myfunction(a,b){
+                return a*b;
+            }
         }
         </script>
        
