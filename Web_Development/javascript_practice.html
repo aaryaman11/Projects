@@ -13,6 +13,10 @@
         <p id="demo1">A number.</p>
         <p id="demo2">A car.</p>
         <p id="demo3">A car table.</p>
+        <p id="demo4">color of car.</p>
+        <p id="demo5">operator.</p>
+        <p id="demo6">BigNumber.</p>
+        <p id="demo7">Boolean.</p>
         <button type="button" onclick="myfunction()">Click me</button>
         
         
@@ -35,6 +39,27 @@
             cars.push(" KIA");
             document.getElementById('demo3').innerHTML= cars;
 
+        }
+        {
+            const car1 = {type:"Fiat", model:"500", color:"white"};
+            car1.color = "red";
+            car1.owner = "Jack"
+            document.getElementById('demo4').innerHTML= "The color of the car is " + car1.color + " and the owner of the car is " + car1.owner; 
+        }
+        {
+            let x = 5;
+            x += 7;
+            document.getElementById('demo5').innerHTML = x;
+        }
+        {
+            let z = BigInt("123456789012345678901234567890");
+            document.getElementById('demo6').innerHTML = z;
+        }
+        {
+            let x= 5;
+            let y = 5;
+            let z = 9;
+            document.getElementById('demo7').innerHTML = (x==y) +"<br>"+(y==z);
         }
         </script>
        
