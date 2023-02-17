@@ -12,6 +12,7 @@
         <p id="demo">A Paragraph.</p>
         <p id="demo1">A number.</p>
         <p id="demo2">A car.</p>
+        <p id="demo3">A car table.</p>
         <button type="button" onclick="myfunction()">Click me</button>
         
         
@@ -27,6 +28,13 @@
         {
             let carName = "Audi";
             document.getElementById("demo2").innerHTML = carName;
+        }
+        {
+            const cars = ["Audi ", " BMW", " Volvo"];
+            cars[0] = "Nissan";
+            cars.push(" KIA");
+            document.getElementById('demo3').innerHTML= cars;
+
         }
         </script>
        
