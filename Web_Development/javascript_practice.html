@@ -18,6 +18,7 @@
         <p id="demo6">BigNumber.</p>
         <p id="demo7">Boolean.</p>
         <p id="demo8">calculation.</p>
+        <p id="demo9">object.</p>
         <button type="button" onclick="myfunction()">Click me</button>
         
         
@@ -68,6 +69,18 @@
             function myfunction(a,b){
                 return a*b;
             }
+        }
+        {
+            const person={
+                Firstname:"Joe",
+                Lastname: "Jackson",
+                id: 3489,
+                fullname:function(){
+                    return this.Firstname + " " + this.Lastname;
+                }
+
+            };
+            document.getElementById('demo9').innerHTML=person.fullname()
         }
         </script>
        
