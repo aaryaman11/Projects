@@ -19,7 +19,10 @@
         <p id="demo7">Boolean.</p>
         <p id="demo8">calculation.</p>
         <p id="demo9">object.</p>
-        <button type="button" onclick="myfunction()">Click me</button>
+        <p id="demo10">string.</p>
+        <p id="demo11">Please visit Microsoft and Microsoft!</p>
+        <button type="button" onclick="myfunction()">Click me</button><br><br>
+        <button onclick="myfunction1()">try me</button>
         
         
         <script>function myfunction(){
@@ -81,6 +84,14 @@
 
             };
             document.getElementById('demo9').innerHTML=person.fullname()
+        }
+        {
+            let text = "We are the so-called \'Vikings\' from the north.";
+            document.getElementById("demo10").innerHTML = text; 
+        }
+        function myfunction1(){
+            let text = document.getElementById('demo11').innerHTML;
+            document.getElementById('demo11').innerHTML = text.replace('Microsoft', 'W3School');
         }
         </script>
        
