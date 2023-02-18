@@ -21,6 +21,8 @@
         <p id="demo9">object.</p>
         <p id="demo10">string.</p>
         <p id="demo11">Please visit Microsoft and Microsoft!</p>
+        <p id="demo12">padding</p>
+        <p id="demo13">character</p>
         <button type="button" onclick="myfunction()">Click me</button><br><br>
         <button onclick="myfunction1()">try me</button>
         
@@ -92,6 +94,14 @@
         function myfunction1(){
             let text = document.getElementById('demo11').innerHTML;
             document.getElementById('demo11').innerHTML = text.replace('Microsoft', 'W3School');
+        }
+        {
+            let text1 = "5";
+            document.getElementById('demo12').innerHTML=text1.padStart(4,'x');
+        }
+        {
+            var j  ="Hello World";
+            document.getElementById('demo13').innerHTML = j.charAt(0);
         }
         </script>
        
