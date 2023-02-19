@@ -61,10 +61,7 @@ function myfunction(){
     let text = "We are the so-called \'Vikings\' from the north.";
     document.getElementById("demo10").innerHTML = text; 
 }
-function myfunction1(){
-    let text = document.getElementById('demo11').innerHTML;
-    document.getElementById('demo11').innerHTML = text.replace('Microsoft', 'W3School');
-}
+
 {
     let text1 = "5";
     document.getElementById('demo12').innerHTML=text1.padStart(4,'x');
@@ -73,4 +70,12 @@ function myfunction1(){
     var j  ="Hello World";
     document.getElementById('demo13').innerHTML = j.charAt(0);
 }
+{
+    let text3 = `He's often called "Johnny"`;
+    document.getElementById("demo14").innerHTML = text3;
+}
+}
+function myfunction1(){
+    let text = document.getElementById('demo11').innerHTML;
+    document.getElementById('demo11').innerHTML = text.replace('Microsoft', 'W3School');
 }
