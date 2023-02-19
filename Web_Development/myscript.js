@@ -74,8 +74,22 @@ function myfunction(){
     let text3 = `He's often called "Johnny"`;
     document.getElementById("demo14").innerHTML = text3;
 }
+{
+    let firstName = "John";
+    let lastName = "Doe";
+
+    let text = `Welcome ${firstName}, ${lastName}!`;
+    document.getElementById('demo15').innerHTML = text;
+}
 }
 function myfunction1(){
     let text = document.getElementById('demo11').innerHTML;
     document.getElementById('demo11').innerHTML = text.replace('Microsoft', 'W3School');
+
+    {
+        let x = "100";
+        let y = "10";
+        let z = x / y;   // this will work and will not be considered as a string
+        document.getElementById("demo16").innerHTML = z;
+    }
 }
