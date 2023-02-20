@@ -98,6 +98,7 @@ function myfunction1(){
     }
     {
         const fruits = ["Pineapple", "Apple", "Mango", "Watermellon"];
+        fruits[4] = "Banana";
         let len = fruits.length;
         let txt = "<ul>" 
         for (i=0; i < len; i++){
@@ -106,4 +107,21 @@ function myfunction1(){
         txt += "<ul>"
         document.getElementById('demo18').innerHTML = txt;
     }
+    {
+        const fruits = ["Pineapple", "Apple", "Mango", "Watermellon"];
+        document.getElementById('demo19').innerHTML = fruits.join("*");
+    }
+    {
+        const fruits = ["Pineapple", "Apple", "Mango", "Watermellon"];
+        fruits.shift();
+        document.getElementById('demo20').innerHTML = fruits;
+        
+    }
+    {
+        const fruits = ["Pineapple", "Apple", "Mango", "Watermellon"];
+        fruits.unshift("Lemon");
+        document.getElementById('demo21').innerHTML = fruits;
+    }
+    /*deleting from array can leave unefined holes-->https://www.w3schools.com/js/js_array_methods.asp*/
+
 }
