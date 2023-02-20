@@ -96,4 +96,14 @@ function myfunction1(){
         let x = BigInt(999999999);
         document.getElementById('demo17').innerHTML = typeof x;
     }
+    {
+        const fruits = ["Pineapple", "Apple", "Mango", "Watermellon"];
+        let len = fruits.length;
+        let txt = "<ul>" 
+        for (i=0; i < len; i++){
+            txt += "<li>" + fruits[i] + "</li>";
+        }
+        txt += "<ul>"
+        document.getElementById('demo18').innerHTML = txt;
+    }
 }
