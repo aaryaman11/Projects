@@ -123,5 +123,17 @@ function myfunction1(){
         document.getElementById('demo21').innerHTML = fruits;
     }
     /*deleting from array can leave unefined holes-->https://www.w3schools.com/js/js_array_methods.asp*/
+    {
+        const array1 = ["Cecilie", "Lone"];
+        const array2 = ["Emil", "Tobias", "Linus"];
+        const array3 = ["Robin", "Morgan"];
+        document.getElementById('demo22').innerHTML = array1.concat(array2, array3);
+    }
+    {
+        const fruits = ["Pineapple", "Apple", "Mango", "Watermellon"];
+        fruits.splice(2,0, "Lemon", "Grapes");
+        document.getElementById('demo23').innerHTML = fruits;
+
+    }
 
 }
