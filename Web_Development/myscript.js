@@ -92,4 +92,8 @@ function myfunction1(){
         let z = x / y;   // this will work and will not be considered as a string
         document.getElementById("demo16").innerHTML = z;
     }
+    {
+        let x = BigInt(999999999);
+        document.getElementById('demo17').innerHTML = typeof x;
+    }
 }
