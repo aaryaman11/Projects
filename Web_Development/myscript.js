@@ -135,5 +135,13 @@ function myfunction1(){
         document.getElementById('demo23').innerHTML = fruits;
 
     }
+    {
+        const points = [40, 100, 1, 5, 25, 10];
+        points.sort(function(a,b){return a-b});
+        document.getElementById('demo24').innerHTML = points;
+    }
+   
 
 }
+
+  
