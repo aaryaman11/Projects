@@ -162,6 +162,23 @@ function myfunction1(){
         function myeachfunction(value){
             txt += value + "<br>";
         }
+        
+    }
+    {
+        const numbers1 = [45, 4, 9, 16, 25];
+        const numbers2 = numbers1.map(myFunction);
+        document.getElementById('demo27').innerHTML = numbers2;
+        function myFunction(value){
+            return value*2;
+        }
+    }
+    {
+        const numbers1 = [45, 4, 9, 16, 25];
+        const numbers2 = numbers1.filter(myFunction);
+        document.getElementById('demo28').innerHTML = numbers2;
+        function myFunction(value){
+            return value > 18;
+        }
     }
    
 
