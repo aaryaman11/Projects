@@ -154,6 +154,15 @@ function myfunction1(){
             return min;
         }
     }
+    {
+        const points = [40, 100, 1, 5, 25, 10];
+        txt = "";
+        points.forEach(myeachfunction);
+        document.getElementById('demo26').innerHTML = txt;
+        function myeachfunction(value){
+            txt += value + "<br>";
+        }
+    }
    
 
 }
