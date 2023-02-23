@@ -215,6 +215,12 @@ function myfunction1(){
         document.getElementById('demo32').innerHTML = date;
 
     }
+    {
+        const date = new Date();
+        
+        document.getElementById('demo33').innerHTML = date.toDateString()
+
+    }
 
 }
 
