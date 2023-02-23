@@ -180,7 +180,16 @@ function myfunction1(){
             return value > 18;
         }
     }
-   
+
+    {
+        const numbers1 = [45, 4, 9, 16, 25];
+        const sum = numbers1.reduce(myFunction);
+        document.getElementById('demo29').innerHTML = "The sum is " + sum;
+        function myFunction(total, value){
+            return total + value;
+        }
+    }
+    /*https://www.w3schools.com/js/js_array_iteration.asp  --> reference for all the methods*/
 
 }
 
