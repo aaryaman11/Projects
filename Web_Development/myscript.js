@@ -221,6 +221,11 @@ function myfunction1(){
         document.getElementById('demo33').innerHTML = date.toDateString()
 
     }
+    {
+        const d = new Date();
+        d.setFullYear(2020, 11, 3);
+        document.getElementById("demo34").innerHTML = d;
+    }
 
 }
 
