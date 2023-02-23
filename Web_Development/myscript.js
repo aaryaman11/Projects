@@ -190,7 +190,31 @@ function myfunction1(){
         }
     }
     /*https://www.w3schools.com/js/js_array_iteration.asp  --> reference for all the methods*/
+    
+    {
+    const fruits = ["Banana", "Orange", "Apple", "Mango"];
+    const keys = fruits.keys();
+
+    let text = "";
+    for (let x of keys) {
+    text += x + "<br>";
+    }
+
+    document.getElementById("demo30").innerHTML = text;
+    }
+    {
+        const fruits = ["Banana", "Orange", "Apple", "Mango"];
+        const f = fruits.entries();
+        
+        for (let x of f) {
+          document.getElementById("demo31").innerHTML += x + "<br>";
+        }
+    }
+    {
+        const date = new Date();
+        document.getElementById('demo32').innerHTML = date;
+
+    }
 
 }
 
-  
