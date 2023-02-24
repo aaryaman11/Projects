@@ -226,6 +226,9 @@ function myfunction1(){
         d.setFullYear(2020, 11, 3);
         document.getElementById("demo34").innerHTML = d;
     }
+    {
+        document.getElementById("demo35").innerHTML = Math.random();
+    }
 
 }
 
