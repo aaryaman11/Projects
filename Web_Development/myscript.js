@@ -234,4 +234,9 @@ function myfunction1(){
     }
 
 }
+function myfunction2(){
+    let age = document.getElementById('age').value;
+    let value = (age<18)? "too young to vote": "old enough to vote";
+    document.getElementById("demo37").innerHTML = value;
+}
 
