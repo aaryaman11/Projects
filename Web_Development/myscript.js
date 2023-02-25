@@ -230,7 +230,7 @@ function myfunction1(){
         document.getElementById("demo35").innerHTML = Math.random();
     }
     {
-        
+        document.getElementById("demo36").innerHTML = Boolean(10>9);
     }
 
 }
