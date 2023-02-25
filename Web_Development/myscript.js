@@ -229,6 +229,9 @@ function myfunction1(){
     {
         document.getElementById("demo35").innerHTML = Math.random();
     }
+    {
+        
+    }
 
 }
 
