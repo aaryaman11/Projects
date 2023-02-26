@@ -238,5 +238,28 @@ function myfunction2(){
     let age = document.getElementById('age').value;
     let value = (age<18)? "too young to vote": "old enough to vote";
     document.getElementById("demo37").innerHTML = value;
+
+    {
+        let day;
+        switch(new Date().getDay()){
+            case 0:
+                day = "Sunday";
+            case 1:
+                day = "Monday";
+            case 2:
+                day = "Tuesday";
+            case 3:
+                 day = "Wednesday";
+            case 4:
+                day = "Thursday";
+            case 5:
+                day = "Friday";
+            case 6:
+                day = "Saturday";
+            case 7:
+                day = "Sunday";
+        }
+        document.getElementById("demo38").innerHTML = "Today is " + day;
+    }
 }
 
