@@ -261,5 +261,14 @@ function myfunction2(){
         }
         document.getElementById("demo38").innerHTML = "Today is " + day;
     }
+    {
+        const cars = ["BMW", "Volvo", "Saab", "Ford", "Fiat", "Audi"];
+        let txt = ""
+        for (i=0; i<cars.length; i++){
+            txt += cars[i] + "<br>";
+        }
+        document.getElementById("demo39").innerHTML = txt;
+
+        }
 }
 
