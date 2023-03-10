@@ -280,5 +280,31 @@ function myfunction2(){
 
            
         }
+        {
+            const numbers = [45, 4, 9, 16, 25];
+            let txt = "";
+            numbers.forEach(myFunction);
+            document.getElementById("demo41").innerHTML = txt;
+            function myFunction(value, index, array){
+                txt += value + "<br>";
+            }
+        }
+        {
+            const cars = ["BMW", "Volvo", "Mini"];
+            let text = "";
+            for (let x of cars){
+                text += x + "<br>";
+            }
+            document.getElementById("demo42").innerHTML = text;
+        }
+        {
+            let text = "";
+            let i = 0;
+            while (i <10){
+                text += "<br>The number is " + i;
+                i++;
+            }
+            document.getElementById("demo43").innerHTML = text;
+        }
 }
 
