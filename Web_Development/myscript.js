@@ -270,5 +270,15 @@ function myfunction2(){
         document.getElementById("demo39").innerHTML = txt;
 
         }
+        {
+            const fruits = ["Banana", "Orange", "Apple", "Mango"];
+            let txt = "";
+            for (i in fruits){
+               txt += fruits[i] + "<br>";
+            }
+            document.getElementById("demo40").innerHTML = txt;
+
+           
+        }
 }
 
