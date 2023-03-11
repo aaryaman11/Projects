@@ -316,5 +316,30 @@ function myfunction2(){
             while (i < 10);
             document.getElementById("demo44").innerHTML = text;
         }
+        {
+            const map = new Map([
+                ["apples",500],
+                ["oranges",100],
+                ["bananas",200]
+            ]);
+            map.set(["pears", 50]); // adding in the map
+            let text = "";
+            for (const x of map){
+                text += x + "<br>";
+            }
+            document.getElementById("demo45").innerHTML = map.get("oranges");
+        }
+        {
+            const num = new Set([1,2,3,4,5,6]);
+            num.add(7);
+            num.add(8);
+            num.delete(5);
+            let text = "";
+            for (const x of num){
+                text += x + "<br>" 
+            }
+            document.getElementById("demo46").innerHTML = text;
+
+        }
 }
 
