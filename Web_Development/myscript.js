@@ -306,5 +306,15 @@ function myfunction2(){
             }
             document.getElementById("demo43").innerHTML = text;
         }
+        {
+            let text = "";
+            let i = 2;
+            do {
+                text += "<br> The number is " + i;
+                i++;
+            }
+            while (i < 10);
+            document.getElementById("demo44").innerHTML = text;
+        }
 }
 
