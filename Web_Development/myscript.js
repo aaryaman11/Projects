@@ -327,7 +327,7 @@ function myfunction2(){
             for (const x of map){
                 text += x + "<br>";
             }
-            document.getElementById("demo45").innerHTML = map.get("oranges");
+            document.getElementById("demo45").innerHTML = text;
         }
         {
             const num = new Set([1,2,3,4,5,6]);
@@ -340,6 +340,13 @@ function myfunction2(){
             }
             document.getElementById("demo46").innerHTML = text;
 
+        }
+        {
+            const date = new Date();
+            document.getElementById("demo47").innerHTML = isDate(date);
+            function isDate(date){
+                return date.constructor === Date;
+            }
         }
 }
 
