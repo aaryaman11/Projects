@@ -350,8 +350,14 @@ function myfunction2(){
         }
         {
             let text = "Visit Microsoft!";
-            let n = text.search("Microsoft");
+            let n = text.search(/microsoft/i);
             document.getElementById("demo48").innerHTML = n;
         }
+        {
+            let num = "123456789";
+            let sea = num.match(/[1-4]/g);
+            document.getElementById("demo49").innerHTML = sea;
+        }
+
 }
 
