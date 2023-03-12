@@ -348,5 +348,10 @@ function myfunction2(){
                 return date.constructor === Date;
             }
         }
+        {
+            let text = "Visit Microsoft!";
+            let n = text.search("Microsoft");
+            document.getElementById("demo48").innerHTML = n;
+        }
 }
 
