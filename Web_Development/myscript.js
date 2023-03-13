@@ -383,5 +383,8 @@ function myfunction3(){
     catch(err){
         document.getElementById("demo51").innerHTML = "Input is " + err;
     }
+    finally {
+        document.getElementById("error").value = "Done";
+    }
 }
 
