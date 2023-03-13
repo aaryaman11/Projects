@@ -358,6 +358,30 @@ function myfunction2(){
             let sea = num.match(/[1-4]/g);
             document.getElementById("demo49").innerHTML = sea;
         }
+        {
+            try {
+                adddlert("Welcome guest!");
+            }
+            catch(err){
+                document.getElementById("demo50").innerHTML = err.message;
+            }
+        }
 
+
+}
+function myfunction3(){
+    document.getElementById("demo51").innerHTML="";
+    let x = document.getElementById("error").value;
+    try {
+        if (x.trim()=="") throw "empty";
+        if (isNaN(x)) throw "not a number";
+        x = Number(x);
+        if (x > 10) throw "too high";
+        if (x < 5) throw "too low";
+        else throw "just right";
+    }
+    catch(err){
+        document.getElementById("demo51").innerHTML = "Input is " + err;
+    }
 }
 
