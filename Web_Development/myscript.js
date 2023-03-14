@@ -370,14 +370,15 @@ function myfunction2(){
 
 }
 function myfunction3(){
+   
     document.getElementById("demo51").innerHTML="";
-    let x = document.getElementById("error").value;
+    let y = document.getElementById("error").value;
     try {
-        if (x.trim()=="") throw "empty";
-        if (isNaN(x)) throw "not a number";
-        x = Number(x);
-        if (x > 10) throw "too high";
-        if (x < 5) throw "too low";
+        if (y.trim()=="") throw "empty";
+        if (isNaN(y)) throw "not a number";
+        y = Number(y);
+        if (y > 10) throw "too high";
+        if (y < 5) throw "too low";
         else throw "just right";
     }
     catch(err){
@@ -386,5 +387,52 @@ function myfunction3(){
     finally {
         document.getElementById("error").value = "Done";
     }
+    {
+        x = 10;
+        document.getElementById("demo52").innerHTML = x;
+        var x;
+    }
+    
+    {
+        const person = {
+            firstName: "John",
+            lastName: "Doe",
+            id: 5566,
+            fullName: function(){
+                return this.firstName + " " + this.lastName;
+            }
+        };
+        document.getElementById("demo53").innerHTML = person.fullName();
+    }
+    {
+        const person = {
+            fullName: function(){
+                return this.firstName + " " + this.lastName;
+            }
+        };
+        const person2 = {
+            firstName: "Mary",
+            lastName: "jackson",
+        };
+        document.getElementById("demo54").innerHTML = person.fullName.call(person2);
+    }
+    const person = {
+        firstName: "John",
+        lastName: "Doe",
+        fullName: function(){
+            return this.firstName + " " + this.lastName;
+        }
+    };
+    const person2 = {
+        firstName: "John",
+        lastName: "Parker",
+    };
+    let fullname = person.fullName.bind(person2);
+    document.getElementById("demo55").innerHTML = fullname();
+}
+function myfunction4(){
+    // using strict mode not it will give error because it z is not declared
+    "use strict";
+    z  = 3.14;
 }
 
