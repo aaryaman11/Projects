@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewpoint" width="width=device-width", initial-scale="1.0">
+        <link rel="icon" type="image/jpg" href="/Web_Development/javascript.png">
+        <script src="myscript.js"></script>
+        <title>
+            Javascript practice testing for import and export
+        </title>
+        <style>
+            body{
+                background-color:black;
+                color: white;
+            }
+        </style>
+    </head>
+    <body>
+        <p id="demo"></p>
+        <p id="demo1"></p>
+        <script type="module">
+            import {name, age} from "./person.js";
+            let text = `My name is ${name} and I am ${age} years old`;
+            document.getElementById("demo").innerHTML = text;
+            import message from "./message.js";
+            document.getElementById("demo1").innerHTML = message();
+        </script>
+    </body>
+</html>

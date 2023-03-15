@@ -443,7 +443,27 @@ function myfunction3(){
         let mycar = new Car("Audi", 2019);
         document.getElementById("demo57").innerHTML = mycar.name + " " + mycar.year;
     }
+    {
+        class Car{
+            constructor(name, year){
+                this.name = name;
+                this.year = year;
+            }
+            age(){
+                let date = new Date();
+                return date.getFullYear() - this.year;
+            }
+    }
+    let mycar = new Car("BMW", 2019);
+    document.getElementById("demo58").innerHTML = "My car is " + mycar.age() + " years old";
+    }
+    {
+       
+    }
+
 }
+
+
 function myfunction4(){
     // using strict mode not it will give error because it z is not declared
     "use strict";
