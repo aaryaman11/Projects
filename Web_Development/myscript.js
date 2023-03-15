@@ -104,7 +104,7 @@ function myfunction1(){
         for (i=0; i < len; i++){
             txt += "<li>" + fruits[i] + "</li>";
         }
-        txt += "<ul>"
+        txt += "</ul>"
         document.getElementById('demo18').innerHTML = txt;
     }
     {
@@ -419,7 +419,7 @@ function myfunction3(){
     const person = {
         firstName: "John",
         lastName: "Doe",
-        fullName: () =>{
+        fullName: function myfunction(){
             return this.firstName + " " + this.lastName;
         }
     };
@@ -474,6 +474,17 @@ function myfunction3(){
         }
         document.getElementById("demo60").innerHTML = check;
 
+    }
+    {
+        const num = [45, 4, 9, 16, 25];
+        document.getElementById('demo61').innerHTML = Math.max(...num); // https://www.w3schools.com/js/js_es6.asp
+    }
+    {
+        // const myPromise = new Promise(function(Resolve, Reject) {
+        //     setTimeout(function(){ Resolve("I love You !!"); }, 3000);
+        //   }); --> This is another way of writing the promise with proper function without using arrow function
+        const myPromise = new Promise((resolve, reject) => {setTimeout(() => resolve("Promise output with timer"), 2000)});
+        myPromise.then((value) => {document.getElementById("demo62").innerHTML = value;});
     }
 
 }
