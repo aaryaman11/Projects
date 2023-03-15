@@ -433,6 +433,16 @@ function myfunction3(){
         let myfunction = (a,b) => a*b;
         document.getElementById("demo56").innerHTML = myfunction(3,4);    
     }
+    {
+        class Car{
+            constructor(name, year){
+                this.name = name;
+                this.year = year;
+            }
+        }
+        let mycar = new Car("Audi", 2019);
+        document.getElementById("demo57").innerHTML = mycar.name + " " + mycar.year;
+    }
 }
 function myfunction4(){
     // using strict mode not it will give error because it z is not declared
