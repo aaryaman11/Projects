@@ -429,6 +429,10 @@ function myfunction3(){
     };
     let fullname = person.fullName.bind(person2);
     document.getElementById("demo55").innerHTML = fullname();
+    {
+        let myfunction = (a,b) => a*b;
+        document.getElementById("demo56").innerHTML = myfunction(3,4);    
+    }
 }
 function myfunction4(){
     // using strict mode not it will give error because it z is not declared
