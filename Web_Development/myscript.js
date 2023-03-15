@@ -419,7 +419,7 @@ function myfunction3(){
     const person = {
         firstName: "John",
         lastName: "Doe",
-        fullName: function(){
+        fullName: () =>{
             return this.firstName + " " + this.lastName;
         }
     };
@@ -458,7 +458,13 @@ function myfunction3(){
     document.getElementById("demo58").innerHTML = "My car is " + mycar.age() + " years old";
     }
     {
-       
+       let text = '{"employees":[' + 
+       '{"firstName":"john", "lastName":"Parker"},' +
+       '{"firstName":"Mary", "lastName":"Jackson"},' +
+       '{"firstName":"Peter", "lastName":"Jones"},' +
+       '{"firstName":"Sam", "lastName":"Doe"}]}';
+       const obj = JSON.parse(text);
+       document.getElementById("demo59").innerHTML = obj.employees[3].firstName + " " + obj.employees[3].lastName;
     }
 
 }
