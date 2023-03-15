@@ -466,6 +466,15 @@ function myfunction3(){
        const obj = JSON.parse(text);
        document.getElementById("demo59").innerHTML = obj.employees[3].firstName + " " + obj.employees[3].lastName;
     }
+    {
+        let num = [45, 4, 9, 16, 25];
+        let check = num.every(myfunction); // checking if every element is greater than 18
+        function myfunction(value) {
+            return value > 18;
+        }
+        document.getElementById("demo60").innerHTML = check;
+
+    }
 
 }
 
