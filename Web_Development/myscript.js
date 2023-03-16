@@ -486,6 +486,20 @@ function myfunction3(){
         const myPromise = new Promise((resolve, reject) => {setTimeout(() => resolve("Promise output with timer"), 2000)});
         myPromise.then((value) => {document.getElementById("demo62").innerHTML = value;});
     }
+    {
+        const person = {
+            firstName: "John",
+            lastName: "Doe",
+            age: 50,
+        }
+        document.getElementById("demo63").innerHTML = Object.entries(person);
+    }
+    {
+        async function myfunction(){
+            const myPromise = new Promise((resolve) => {setTimeout(() => resolve("Using promise with async"), 2000)});
+            document.getElementById("demo64").innerHTML = await myPromise;
+        }
+    }
 
 }
 
