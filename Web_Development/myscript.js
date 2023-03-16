@@ -494,11 +494,34 @@ function myfunction3(){
         }
         document.getElementById("demo63").innerHTML = Object.entries(person);
     }
-    {
+    {// this block is not showing output and not showing any error in console
         async function myfunction(){
-            const myPromise = new Promise((resolve) => {setTimeout(() => resolve("Using promise with async"), 2000)});
-            document.getElementById("demo64").innerHTML = await myPromise;
+            // let myPromise = new Promise((resolve) => {setTimeout(() => resolve("Using promise with async"), 2000)});
+            // document.getElementById("demo64").innerHTML = await myPromise;
+            let myPromise = new Promise(function(resolve) {
+                setTimeout(function() {resolve("I love You !!");}, 3000);
+              });
+              document.getElementById("demo64").innerHTML = await myPromise;
+            }
+    }
+    {
+        const myObj = {
+            name: "John",
+            age: 30,
+            city: "New York",
+            cars: [
+                {name: "Ford", models:["Fiesta", "Focus", "Mustang"]},
+                {name: "BMW", models: ["320", "X3", "X5"]},
+                {name: "Fiat", models: ["500", "Panda"]}
+            ]
         }
+        for (let i in myObj.cars){
+            x += "<h1>" + myObj.cars[i].name + "</h1>";
+            for (let j in myObj.cars[i].models){
+                x += myObj.cars[i].models[j] + "<br>";
+            }
+        }
+        document.getElementById("demo65").innerHTML = x;
     }
 
 }
