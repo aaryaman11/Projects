@@ -523,6 +523,40 @@ function myfunction3(){
         }
         document.getElementById("demo65").innerHTML = x;
     }
+    {// getters property
+        const person = {
+            firstName: "John",
+            lastName: "Doe",
+            language: "en",
+            get lang(){
+                return this.language},
+        };
+        document.getElementById("demo66").innerHTML = person.lang;
+    }
+    {// setters property
+        const person = {
+            firstName: "John",
+            lastName: "Doe",
+            language: "NO",
+            set lang(value){
+                this.language = value;},
+        };
+        person.lang = "EN"
+        document.getElementById("demo67").innerHTML = person.language;
+    }
+    {
+        const obj = {counter:0};
+        Object.defineProperty(obj, "resert", {get: function(){this.counter=0;}});
+        Object.defineProperty(obj, "increment", {get: function(){this.counter++;}});
+        Object.defineProperty(obj, "decrement", {get: function(){this.counter--;}});
+        Object.defineProperty(obj, "add", {set: function(value){this.counter += value;}});
+        Object.defineProperty(obj, "subtract", {set: function(value){this.counter -= value;}});
+        obj.add = 7;
+        obj.subtract = 3;
+        obj.increment;
+        obj.decrement;
+        document.getElementById("demo68").innerHTML = obj.counter;
+    }
 
 }
 
