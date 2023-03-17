@@ -557,6 +557,17 @@ function myfunction3(){
         obj.decrement;
         document.getElementById("demo68").innerHTML = obj.counter;
     }
+    { // https://www.w3schools.com/js/js_object_prototypes.asp
+        function Person(first, last, age, eye) {
+            this.firstName = first;
+            this.lastName = last;
+            this.age = age;
+            this.eyeColor = eye;
+        }
+        Person.prototype.nationality = "English";
+        const teacher = new Person("John", "Doe", 50, "blue");
+        document.getElementById("demo69").innerHTML = "My teacher speaks " + teacher.nationality;
+    }
 
 }
 
