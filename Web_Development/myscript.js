@@ -578,7 +578,7 @@ function myfunction3(){
         }
         document.getElementById("demo70").innerHTML = sum(1,2,3,4,5);
     }
-    {
+    { // https://www.w3schools.com/js/js_function_parameters.asp
         let x = sumAll(1, 123, 500, 115, 44, 88);
         function sumAll(){
             let sum = 0;
