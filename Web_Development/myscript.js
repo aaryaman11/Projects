@@ -589,7 +589,22 @@ function myfunction3(){
         }
         document.getElementById("demo71").innerHTML = x;
     }
-
+    {
+        const Person = {
+            fullName: function(state, country) {
+                return this.firstName + " " + this.lastName + ", " + state + ", " + country;
+            }
+        }
+        const person1 = {
+            firstName: "John",
+            lastName: "Doe",
+        }
+        const person2 = {
+        firstName: "Mary",
+        lastName: "Doe",
+        }
+        document.getElementById("demo72").innerHTML = Person.fullName.call(person1, "California", "United Sates");
+    }
 }
 
 
