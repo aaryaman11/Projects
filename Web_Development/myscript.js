@@ -568,6 +568,16 @@ function myfunction3(){
         const teacher = new Person("John", "Doe", 50, "blue");
         document.getElementById("demo69").innerHTML = "My teacher speaks " + teacher.nationality;
     }
+    {
+        function sum(...args){
+            let sum = 0;
+            for (let i of args){
+                sum += i;
+            }
+            return sum;
+        }
+        document.getElementById("demo70").innerHTML = sum(1,2,3,4,5);
+    }
 
 }
 
