@@ -626,6 +626,21 @@ function myfunction3(){
         let mycar = new Model("Ford", "Mustang");
         document.getElementById("demo74").innerHTML = mycar.show();
     }
+    {
+        class car{
+            constructor(brand){
+                this.carname = brand;
+            }
+            get cnam(){
+                return this.carname;
+            }
+            set cnam(x){
+                this.carname = x;
+            }
+        }
+        let myCar = new car("Audi");
+        document.getElementById("demo75").innerHTML = myCar.cnam;
+    }
    
 }
 const add = (function(){
