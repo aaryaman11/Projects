@@ -605,7 +605,16 @@ function myfunction3(){
         }
         document.getElementById("demo72").innerHTML = Person.fullName.call(person1, "California", "United Sates");
     }
+   
 }
+const add = (function(){
+    let counter = 0;
+    return function(){counter  += 1; return counter;}
+})();
+function myfunction() {
+    document.getElementById("demo73").innerHTML = add();
+}
+
 
 
 function myfunction4(){

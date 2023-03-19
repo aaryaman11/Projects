@@ -12,6 +12,14 @@
                 background-color:black;
                 color: white;
             }
+            .container{
+                display: flex;
+                flex-flow: row;
+               
+            }
+            .fix{
+                margin:10px;
+            }
         </style>
     </head>
     <body>
@@ -95,6 +103,10 @@
         <p id="demo70">rest parameter</p>
         <p id="demo71">Arguments object</p>
         <p id="demo72">function call</p>
+        <div class="container">
+            <p id="demo73">closure</p>
+            <button onclick="myfunction()" class="fix">Count!!</button><br><br>
+        </div>
         <input type="text" id="strict" value="strict mode">
         <button onclick="myfunction4()">check strict mode</button>
        
