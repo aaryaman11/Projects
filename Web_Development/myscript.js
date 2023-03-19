@@ -605,6 +605,27 @@ function myfunction3(){
         }
         document.getElementById("demo72").innerHTML = Person.fullName.call(person1, "California", "United Sates");
     }
+    {
+        class Car{
+            constructor(brand){
+                this.carname = brand;
+            }
+            present(){
+                return "I have a " + this.carname;
+            }
+        }
+        class Model extends Car{
+            constructor(brand, model) {
+                super(brand);
+                this.model = model;
+            }
+            show(){
+                return this.present()  + ", it is a " + this.model;
+            }
+        }
+        let mycar = new Model("Ford", "Mustang");
+        document.getElementById("demo74").innerHTML = mycar.show();
+    }
    
 }
 const add = (function(){
