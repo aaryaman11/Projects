@@ -641,6 +641,28 @@ function myfunction3(){
         let myCar = new car("Audi");
         document.getElementById("demo75").innerHTML = myCar.cnam;
     }
+    {
+        class car{
+            constructor(brand){
+                this.carname = brand;
+            }
+            static hello(x){
+                return "Hello!! " + x.carname;
+            }
+        }
+        let myCar = new car("BMW");
+        document.getElementById("demo76").innerHTML = car.hello(myCar);
+    }
+    {
+        function myisplay(some){
+            document.getElementById("demo77").innerHTML = some;
+        }
+        function calculator(num1, num2, mycallback){
+            let sum  = num1 + num2;
+            mycallback(sum);
+        }
+        calculator(5, 5, myisplay);
+    }
    
 }
 const add = (function(){
