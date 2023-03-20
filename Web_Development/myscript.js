@@ -663,6 +663,13 @@ function myfunction3(){
         }
         calculator(5, 5, myisplay);
     }
+    {
+        setTimeout(myfunction, 3000);
+
+        function myfunction(){
+            document.getElementById("demo78").innerHTML = "Hello World";
+        }
+    }
    
 }
 const add = (function(){
