@@ -718,10 +718,34 @@ function myfunction3(){
             return "Hello Async";
         }
         mydisplay().then((value)=>{mydisplayer(value);},
-        (error)=>{mydisplayer(error);});
-
+        (error)=>{mydisplayer(error);})
     }
-
+    {
+        async function myDisplay(){
+            let myPromise = new Promise(function(resolve, reject){
+                resolve("I love making and exploring new things");
+        });
+        document.getElementById("demo84").innerHTML = await myPromise;
+    }
+        myDisplay();
+    }
+    {
+        async function getfile(){
+            let myPromise = new Promise((resolve, reject)=>{
+                let req = new XMLHttpRequest();
+                req.open('GET', "mycar.html");
+                req.onload = function(){
+                    if (req.status == 200){
+                        resolve(req.response);
+                    } else {
+                        resolve("file not found");
+                    }
+                };
+                    req.send();
+            });
+            document.getElementById("demo85").innerHTML = await myPromise;
+        }
+    }
    
 }
 const add = (function(){
