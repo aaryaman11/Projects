@@ -717,7 +717,9 @@ function myfunction3(){
         async function mydisplay(){
             return "Hello Async";
         }
-        mydisplay().then((value)=>{mydisplayer(value);});
+        mydisplay().then((value)=>{mydisplayer(value);},
+        (error)=>{mydisplayer(error);});
+
     }
 
    
