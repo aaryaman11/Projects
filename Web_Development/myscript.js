@@ -663,11 +663,19 @@ function myfunction3(){
         }
         calculator(5, 5, myisplay);
     }
-    {
+    { // setTimeout variation 1
         setTimeout(myfunction, 3000);
 
         function myfunction(){
             document.getElementById("demo78").innerHTML = "Hello World";
+        }
+        { // setTimeout variation 2
+            setTimeout(()=>{myfunction("Second Hello World")}, 3000);
+
+            function myfunction(value){
+                document.getElementById("demo79").innerHTML = value;
+            }
+
         }
     }
    
