@@ -685,6 +685,41 @@ function myfunction3(){
             }
         }
     }
+    { // https://www.w3schools.com/js/js_promise.asp
+        function mydisplay(some){
+            document.getElementById("demo81").innerHTML = some;
+        }
+        let myPromise = new Promise(function(resolve, reject){
+            let x = 0;
+            if (x ==0){
+                resolve("OK");
+            }
+            else {
+                reject("Error");
+            }
+        })
+        myPromise.then(
+            function(value){mydisplay(value);},
+            function(error){mydisplay(error);}
+        );
+    }
+    {
+        const myPromise = new Promise(function(resolve,reject){
+            setTimeout(()=>{resolve("I love making things");}, 3000);
+        });
+        myPromise.then((value)=>{
+            document.getElementById("demo82").innerHTML = value;});
+    }
+    {
+        function mydisplayer(some){
+            document.getElementById("demo83").innerHTML = some;
+        }
+        async function mydisplay(){
+            return "Hello Async";
+        }
+        mydisplay().then((value)=>{mydisplayer(value);});
+    }
+
    
 }
 const add = (function(){
