@@ -747,6 +747,18 @@ function myfunction3(){
         }
         getfile();
     }
+    { // https://www.w3schools.com/js/js_htmldom_events.asp
+        function checkcookies() {
+            let  text ="";
+            if (navigator.cookieEnabled == true) {
+                text = "Cookies are enabled.";
+            } else {
+                text = "Cookies are not enabled.";
+            }
+            document.getElementById("demo86").innerHTML = text;
+        }
+        onload = checkcookies();
+    }
    
 }
 const add = (function(){
