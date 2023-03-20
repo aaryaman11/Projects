@@ -677,6 +677,13 @@ function myfunction3(){
             }
 
         }
+        {
+            setInterval(myfunction, 1000);
+            function myfunction(){
+                let d = new Date();
+                document.getElementById("demo80").innerHTML = d.toLocaleTimeString();
+            }
+        }
     }
    
 }
