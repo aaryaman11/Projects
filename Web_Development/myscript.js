@@ -729,7 +729,7 @@ function myfunction3(){
     }
         myDisplay();
     }
-    {
+    { // https://www.w3schools.com/js/js_async.asp
         async function getfile(){
             let myPromise = new Promise((resolve, reject)=>{
                 let req = new XMLHttpRequest();
@@ -745,6 +745,7 @@ function myfunction3(){
             });
             document.getElementById("demo85").innerHTML = await myPromise;
         }
+        getfile();
     }
    
 }
