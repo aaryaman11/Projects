@@ -776,4 +776,12 @@ function myfunction4(){
     "use strict";
     z  = 3.14;
 }
+{ // button id  --> btn used for  this event listener
+    window.onload =function(){
+    document.getElementById("btn").addEventListener("click", myfunction5);
+    }
+    function myfunction5(){
+        alert("Testing Add Event Listener");
+    }
+}
 
